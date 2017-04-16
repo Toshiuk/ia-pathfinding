@@ -2,11 +2,39 @@
 <HTML>
  <HEAD>
    <meta charset="UTF-8">
+   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+   <link rel="stylesheet" type="text/css" href="css/style.css">
   <TITLE>Pathfinding Flavio e Olavio </TITLE>
  </HEAD>
 
  <BODY>
-  <h2> Trabalho Pathfinding Flávio e Olavio - Pathfinding no Bairro Sarandi- Porto Alegre/RS </h2>
-  <iframe src="https://www.google.com/maps/d/embed?mid=1XMyF4guffIas6TvRkKb-wMxAoFA" width="1920" height="1080"></iframe>
+  <h2> Trabalho Pathfinding Flávio e Olavio - Pathfinding no Bairro Sarandi - Porto Alegre/RS </h2>
+  <div id="map" class="map"></div>
+<script>
+  function initMap() {
+        var ponto1 = {lat: -29.98101, lng: -51.12762};
+        var ponto2 = {lat: -29.981386500, lng: -51.135263400};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: ponto1
+        });
+      var iconBase = 'img/icon.png';
+        var marker = new google.maps.Marker({
+    position: ponto1,
+    map: map,
+    icon: iconBase
+  });
+  var marker2 = new google.maps.Marker({
+position: ponto2,
+map: map,
+icon: iconBase
+});
+}
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIXYzYtSgWxddk7Rv7vWmVGv2hPHMDe3c&callback=initMap">
+    </script>
  </BODY>
 </HTML>

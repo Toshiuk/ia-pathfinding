@@ -10,26 +10,53 @@
 
  <BODY>
   <h2> Trabalho Pathfinding Flávio e Olavio - Pathfinding no Bairro Sarandi - Porto Alegre/RS </h2>
+<div id="form" class "form" > aqui vai ter alguma coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa
+ aqui vai ter alguma coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa coisa </div>
   <div id="map" class="map"></div>
+
 <script>
   function initMap() {
-        var ponto1 = {lat: -29.98101, lng: -51.12762};
-        var ponto2 = {lat: -29.981386500, lng: -51.135263400};
+    //criação dos pontos
+    var points = [];
+    var centro = {lat:-29.983486700, lng:-51.130521300};
+        var ponto1 = {lat: -29.981386500		, lng: -51.135263400};
+        points.push(ponto1);
+        var ponto2 = {lat: -29.983115000		, lng: -51.135134700};
+        points.push(ponto2);
+        var ponto3 = {lat: -29.984806300	, lng: -51.135048900};
+        points.push(ponto3);
+        var ponto4 = {lat:-29.986516200	, lng: -51.134898700};
+        points.push(ponto4);
+        var ponto5 = {lat: -29.988244600	, lng: -51.134705500};
+        points.push(ponto5);
+        var ponto6 = {lat: -29.988114500	, lng: -51.133997400};
+        points.push(ponto6);
+        var ponto7 = {lat: -29.986441800	, lng: -51.134233500};
+        points.push(ponto7);
+        var ponto8 = {lat: -29.984750600	, lng: -51.134276400};
+        points.push(ponto8);
+        var ponto9 = {lat:-29.983077800	, lng: -51.134383700};
+        points.push(ponto9);
+        var ponto10 = {lat: -29.981405100, lng: 	-51.134405100};
+        points.push(ponto10);
+        var ponto11 = {lat:-29.981367900, lng:	-51.133697000};
+          points.push(ponto11);
+            //fim criação dos pontos
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
-          center: ponto1
+          center: centro
         });
       var iconBase = 'img/icon.png';
-        var marker = new google.maps.Marker({
-    position: ponto1,
-    map: map,
-    icon: iconBase
-  });
-  var marker2 = new google.maps.Marker({
-position: ponto2,
-map: map,
-icon: iconBase
+    //inserir marcadores no mapa
+    for (var i = 0; i < points.length; i++) {
+      var marker = new google.maps.Marker({
+  position: points[i],
+  map: map,
+  icon: iconBase
 });
+//fim marcadores
+  }
+
 }
 
     </script>

@@ -1,4 +1,3 @@
-type	latitude	longitude	color	scale	sym	name
 W	-29.981386500	-51.135263400	#0288d1	1	http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png	Ponto 1
 W	-29.983115000	-51.135134700	#0288d1	1	http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png	Ponto 2
 W	-29.984806300	-51.135048900	#0288d1	1	http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png	Ponto 3

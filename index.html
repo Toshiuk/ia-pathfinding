@@ -1,158 +1,131 @@
 <!DOCTYPE HTML>
 <html>
- <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-   <link rel="stylesheet" type="text/css" href="css/style.css">
-   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <TITLE>Pathfinding Flavio e Olavio </TITLE>
 </head>
 
- <body>
-   <div class="container">
-     <header class="row">
-       <h2> Trabalho Pathfinding Flávio e Olavio - Pathfinding no Bairro Sarandi - Porto Alegre/RS </h2>
-   </header>
-   <div class="row">
-       <div id="map" role="main" class="col-md-8">
+<body>
+  <div class="container">
+    <header class="row">
+      <h2> Trabalho Pathfinding Flávio e Olavio - Pathfinding no Bairro Sarandi - Porto Alegre/RS </h2>
+    </header>
+    <div class="row">
+      <div id="map" role="main" class="col-md-8">
 
-       </div>
-       <aside role="complementary" class="col-md-4"> aqui vai ter alguma coisa coisa coisa
+      </div>
+      <aside role="complementary" class="col-md-4"> aqui vai ter alguma coisa coisa coisa
 
-       </aside>
-   </div>
-  
-
-   </div>
+      </aside>
+    </div>
 
 
-   <!-- Latest compiled and minified CSS -->
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </div>
 
- <!-- jQuery library -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
- <!-- Latest compiled JavaScript -->
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
   function initMap() {
     //criação dos pontos
-    var points = [];
-    var centro = {lat:-29.983486700, lng:-51.130521300};
-        var ponto1 = {lat: -29.981386500		, lng: -51.135263400};
-        points.push(ponto1);
-        var ponto2 = {lat: -29.983115000		, lng: -51.135134700};
-        points.push(ponto2);
-        var ponto3 = {lat: -29.984806300	, lng: -51.135048900};
-        points.push(ponto3);
-        var ponto4 = {lat:-29.986516200	, lng: -51.134898700};
-        points.push(ponto4);
-        var ponto5 = {lat: -29.988244600	, lng: -51.134705500};
-        points.push(ponto5);
-        var ponto6 = {lat: -29.988114500	, lng: -51.133997400};
-        points.push(ponto6);
-        var ponto7 = {lat: -29.986441800	, lng: -51.134233500};
-        points.push(ponto7);
-        var ponto8 = {lat: -29.984750600	, lng: -51.134276400};
-        points.push(ponto8);
-        var ponto9 = {lat:-29.983077800	, lng: -51.134383700};
-        points.push(ponto9);
-        var ponto10 = {lat: -29.981405100, lng: 	-51.134405100};
-        points.push(ponto10);
-        var ponto11 = {lat:-29.981367900, lng:	-51.133697000};
-        points.push(ponto11);
-        var ponto12 = {lat: -29.982984900	, lng: -51.133589700};
-        points.push(ponto12);
-        var ponto13 = {lat: -29.984713400	, lng: -51.133439500};
-        points.push(ponto13);
-        var ponto14 = {lat: -29.986404700	, lng: -51.133289300};
-        points.push(ponto14);
-        var ponto15 = {lat: -29.988077300	, lng: -51.133267900};
-        points.push(ponto15);
-        var ponto16 = {lat: -29.988077300	, lng: -51.132495400};
-        points.push(ponto16);
-        var ponto17 = {lat: -29.986367500	, lng: -51.132559800};
-        points.push(ponto17);
-        var ponto18 = {lat: -29.984676200	, lng: -51.132731400};
-        points.push(ponto18);
-        var ponto19 = {lat: -29.981293500	, lng: -51.132924600};
-        points.push(ponto19);
-        var ponto20 = {lat: -29.981256400	, lng: -51.132173500};
-        points.push(ponto20);
-        var ponto21 = {lat: -29.982260000	, lng: -51.132087700};
-        points.push(ponto21);
-        var ponto22 = {lat: -29.982947700	, lng:-51.132087700};
-        points.push(ponto22);
-        var ponto23 = {lat: -29.983654000	, lng: -51.132023300};
-        points.push(ponto23);
-        var ponto24 = {lat: -29.984676200	, lng: -51.131894600};
-        points.push(ponto24);
-        var ponto25 = {lat: -29.986311700	, lng: -51.131787300};
-        points.push(ponto25);
-        var ponto26 = {lat: -29.987928700	, lng:-51.131658600};
-        points.push(ponto26);
-        var ponto27 = {lat: -29.987891500	, lng: -51.130971900};
-        points.push(ponto27);
-        var ponto28 = {lat: -29.986330300	, lng: -51.131100700};
-        points.push(ponto28);
-        var ponto29 = {lat: -29.984620500	, lng: -51.131143600};
-        points.push(ponto29);
-        var ponto30 = {lat:-29.983579600	, lng: -51.131293800};
-        points.push(ponto30);
-        var ponto31 = {lat:-29.982222900	, lng: -51.131379600};
-        points.push(ponto31);
-        var ponto32 = {lat: -29.981144900	, lng: -51.131401100};
-        points.push(ponto32);
-        var ponto33 = {lat: -29.981182000		, lng: -51.130757300};
-        points.push(ponto33);
-        var ponto34 = {lat: -29.982241400	, lng: -51.130607100};
-        points.push(ponto34);
-        var ponto35 = {lat: -29.983486700		, lng: -51.130521300};
-        points.push(ponto35);
-        var ponto36 = {lat: 	-29.984527500	, lng: -51.130456900};
-        points.push(ponto36);
-        var ponto37 = {lat: -29.987947300		, lng: -51.130199400};
-        points.push(ponto37);
-        var ponto38 = {lat: -29.987928700	, lng: -51.129362600};
-        points.push(ponto38);
-        var ponto39 = {lat: -29.986181600	, lng:-51.129512800};
-        points.push(ponto39);
-        var ponto40 = {lat: -29.984490400	, lng: -51.129663000};
-        points.push(ponto40);
-        var ponto41 = {lat: -29.981107700	, lng: -51.129941900};
-        points.push(ponto41);
-        var ponto42 = {lat: -29.981051900	, lng: -51.129190900};
-        points.push(ponto42);
-        var ponto43 = {lat: -29.984508900	, lng: -51.128890500};
-        points.push(ponto43);
-        var ponto44 = {lat: -29.987835700	, lng:-51.128611600};
-        points.push(ponto44);
-        //fim criação dos pontos
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: centro
-        });
-      var iconBase = 'img/icon.png';
+    var pnts = new Array();
+    function addpnt(pntf1, pntf2) {
+      pntf1.proxpnt.push(pntf2);
+      addpnt1(pntf2, pntf1);
+    }
+    function addpnt1(pntf1, pntf2) {
+      pntf1.proxpnt.push(pntf2);
+    }
+        pnts[0] = {lat: -29.981386500		, lng: -51.135263400, proxpnt : [] };
+        pnts[1] = {lat: -29.983115000		, lng: -51.135134700, proxpnt : [] };
+        pnts[2] = {lat: -29.984806300	, lng: -51.135048900, proxpnt : [] };
+        pnts[3] = {lat:-29.986516200	, lng: -51.134898700, proxpnt : [] };
+        pnts[4] = {lat: -29.988244600	, lng: -51.134705500, proxpnt : [] };
+        pnts[5] = {lat: -29.988114500	, lng: -51.133997400, proxpnt : [] };
+        pnts[6] = {lat: -29.986441800	, lng: -51.134233500, proxpnt : [] };
+        pnts[7] = {lat: -29.984750600	, lng: -51.134276400, proxpnt : [] };
+        pnts[8] = {lat:-29.983077800	, lng: -51.134383700, proxpnt : [] };
+        pnts[9] = {lat: -29.981405100, lng: 	-51.134405100, proxpnt : [] };
+        pnts[10] = {lat:-29.981367900, lng:	-51.133697000, proxpnt : [] };
+        pnts[11] = {lat: -29.982984900	, lng: -51.133589700, proxpnt : [] };
+        pnts[12] = {lat: -29.984713400	, lng: -51.133439500, proxpnt : [] };
+        pnts[13] = {lat: -29.986404700	, lng: -51.133289300, proxpnt : [] };
+        pnts[14] = {lat: -29.988077300	, lng: -51.133267900, proxpnt : [] };
+        pnts[15] = {lat: -29.988077300	, lng: -51.132495400, proxpnt : [] };
+        pnts[16] = {lat: -29.986367500	, lng: -51.132559800, proxpnt : [] };
+        pnts[17] = {lat: -29.984676200	, lng: -51.132731400, proxpnt : [] };
+        pnts[18] = {lat: -29.981293500	, lng: -51.132924600, proxpnt : [] };
+        pnts[19] = {lat: -29.981256400	, lng: -51.132173500, proxpnt : [] };
+        pnts[20] = {lat: -29.982260000	, lng: -51.132087700, proxpnt : [] };
+        pnts[21] = {lat: -29.982947700	, lng:-51.132087700, proxpnt : [] };
+        pnts[22] = {lat: -29.983654000	, lng: -51.132023300, proxpnt : [] };
+        pnts[23] = {lat: -29.984676200	, lng: -51.131894600, proxpnt : [] };
+        pnts[24] = {lat: -29.986311700	, lng: -51.131787300, proxpnt : [] };
+        pnts[25] = {lat: -29.987928700	, lng:-51.131658600, proxpnt : [] };
+        pnts[26] = {lat: -29.987891500	, lng: -51.130971900, proxpnt : [] };
+        pnts[27] = {lat: -29.986330300	, lng: -51.131100700, proxpnt : [] };
+        pnts[28] = {lat: -29.984620500	, lng: -51.131143600, proxpnt : [] };
+        pnts[29] = {lat:-29.983579600	, lng: -51.131293800, proxpnt : [] };
+        pnts[30] = {lat:-29.982222900	, lng: -51.131379600, proxpnt : [] };
+        pnts[31] = {lat: -29.981144900	, lng: -51.131401100, proxpnt : [] };
+        pnts[32] = {lat: -29.981182000		, lng: -51.130757300, proxpnt : [] };
+        pnts[33] = {lat: -29.982241400	, lng: -51.130607100, proxpnt : []};
+        pnts[34] = {lat: -29.983486700		, lng: -51.130521300, proxpnt : [] };
+        pnts[35] = {lat: 	-29.984527500	, lng: -51.130456900, proxpnt : [] };
+        pnts[36] = {lat: -29.987947300		, lng: -51.130199400, proxpnt : [] };
+        pnts[37] = {lat: -29.987928700	, lng: -51.129362600, proxpnt : [] }
+        pnts[38] = {lat: -29.986181600	, lng:-51.129512800, proxpnt : [] }
+        pnts[39] = {lat: -29.984490400	, lng: -51.129663000, proxpnt : [] }
+        pnts[40] = {lat: -29.981107700	, lng: -51.129941900, proxpnt : [] }
+        pnts[41] = {lat: -29.981051900	, lng: -51.129190900, proxpnt : [] }
+        pnts[42] = {lat: -29.984508900	, lng: -51.128890500, proxpnt : [] }
+        pnts[43] = {lat: -29.987835700	, lng:-51.128611600, proxpnt : [] }
+    //fim criação dos pontos
+//colocação dos vizinhos
+    addpnt(pnts[0],pnts[1]);
+    addpnt(pnts[1], pnts[2]);
+
+//fim vizinhos
+//testa vizinhos
+    for (var i = 0; i < pnts[1].proxpnt.length; i++) {
+      console.log(pnts[1].proxpnt[i].lat);
+    }
+    //fim testa vizinhos
+
+
+    //cria mapa
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 16,
+      center: pnts[0]
+    });
+    var iconBase = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAE9UlEQVRIS31VeWwUZRT/fTOzMzt7THe3IJcKKhC0gsilFIyScEgEERAtVgGVcoVLQI5ajhDAgrQGkEBJQIrhRhCqJggioICBYlAKQooSgtBS2p3ZY3Z2Z2dmzQyUsN1dvr8m7/1+3++99715j+ARx+/3P8lQzHuGHBpGaKaTwdoEApIgcTVo6PrftMNxkGHZHQ6H479M15B0jkgk8rgaCKyBjR0a++2crp74w65V34DuD1hwOtsDpmM7cK92V9jcbgzR9G8Zt3OW0+msaXpfikBIkkYZcW1reO9PNmXzPpshBh+VJKhsD1wF76r88H5xwtDvC17vdw8TkgRCojhdl5VicepyPv7X1aSLiZMH27WTZVMvXEFCVpL8bPfn4FlTqMDOzvb4fBsanQ8EzMj1cKS8IX8ur9+sTSI7PxoBrldnxE5fsOxcblfEzl6EvGV/Eo55qg1836yMUjyXJ3i9B02nJWDWPC5HrvoLFjuaRu4YNQhm/c2oCc8BCSARjVnZMB3aIrL3cHImPZ6Hd32RTPP29i6Xq9YSCNbU7QsdOPqmvHqL7WE0m9sVXI8chNZuB9enG5xjh4EwNEIbd0M9exHu6fmIVV6Cej+zRq5QNFnlX++7L6t1i3xitiJlJKrrBxWwTR9UKJyAyP6jSIQjEGaPg/hJsXWHd20hgis2gXgEOEb0t74fPvRj2fB9v15jeb4tCUrB+crx04sDs1bbk1AUQdayGQguK7PKQbd/ApFthyyI+SZaVTXUqmsQiiYgULQWMBJJdO+GhQrXq0sRkW7dOhNaXf6ycvBYSjsKCydB2XsY8SvXkfXZRGg3bgMsA6qZD6FVm2Hr9DT4kQMQXF6WwnXkDYYwNf84CdTeEf3jF3nil/9JBb09EHqdH7GTlQBFwA/si0TCQPTwqXvd9FpPUD4PlP1HUrhW23618C4R/X69YcgUyqitTwGZtXTP+xjS7FVpfzbPl/MQWrEJ+l0xxc+0awPvntI4kfyiVj9kMp1OwGQJcz6EcuQM4n9eSW7HF58F1+8lhEq3phW3/ok9pSoJ3Lnj949f7I1fupYWaOvSEfzgVxBcuTnJL8wvgFLxCzLx2B458KwrqiPi7dunwiXbcpUDR9MKmEbPF3MQKtkK/X4Z6dbN4ZrxAQLzSjNyHKPfgDBl9DESlKS50ZPnlkgzV/KZ0Pb+vUG3aQG5/N4cc44bDv1mDaI//55RwLtxkcL27LyAWKM5ovxbP3iizWiQMhKyt32OhnGFACHI/no5GsYsyIilWjZDs4r1cYbjnrRGRaCmdpdS8evwYHEZm4nlyB+CxgAoXxYiO37IKCAsmaZyA3rt8rZqNdYSkGW5lRZRqsUpS53q+ctpiXRzL9yFE0AIQWBZGYz61NY0iWzvF+AtXRCiHNwzbrf77oNxHRTFt7RIdKc0Zr5du34rrUjW0mmWPbBoXfqO69AW3vIVUcLaRmb5fD+aoKSFI/n9kxFVS6WZxXa1sipjCdI5zMg9JXOjlJ2bKng8D3o6ZWUGRXFYQtO3KxUnbPKmPaxe1/BIIfNBXZNGq/ygPjHYqLzGyBtJaZd+OBxuqQflEoOl39HOX4rHTlTy5tIxGgJWzuYeZjrcW/q27jlMQlV3Mi7Xp263u65pNGkFGkGyLLfWVTUPSmyoQdM5CZryEIIENEOiNL0q4eAO0TbbbnNzZUrzf/d9Dn+EhdXyAAAAAElFTkSuQmCC';
     //inserir marcadores no mapa
-    for (var i = 0; i < points.length; i++) {
+    for (var i = 0; i < pnts.length; i++) {
       var marker = new google.maps.Marker({
-  position: points[i],
-  map: map,
-  icon: iconBase
-});
-//fim marcadores
+        position: pnts[i],
+        map: map,
+        icon: iconBase
+      });
+    }
   }
+  //fim marcadores
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIXYzYtSgWxddk7Rv7vWmVGv2hPHMDe3c&callback=initMap"></script>
 
-}
-
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIXYzYtSgWxddk7Rv7vWmVGv2hPHMDe3c&callback=initMap"></script>
-
- </body>
+</body>
 </html>

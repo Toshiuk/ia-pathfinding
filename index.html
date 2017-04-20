@@ -4,12 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
   <TITLE>Pathfinding Flavio e Olavio </TITLE>
 </head>
 
@@ -20,24 +17,14 @@
     </header>
     <div class="row">
       <div id="map" role="main" class="col-md-8">
-
       </div>
       <aside role="complementary" class="col-md-4"> aqui vai ter alguma coisa coisa coisa
-
       </aside>
     </div>
-
-
   </div>
 
-
-  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-  <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
-  <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
   function initMap() {
@@ -87,65 +74,182 @@
     pnts[34] = {lat: -29.983486700		, lng: -51.130521300, proxpnt : [] };
     pnts[35] = {lat: 	-29.984527500	, lng: -51.130456900, proxpnt : [] };
     pnts[36] = {lat: -29.987947300		, lng: -51.130199400, proxpnt : [] };
-    pnts[37] = {lat: -29.987928700	, lng: -51.129362600, proxpnt : [] }
-    pnts[38] = {lat: -29.986181600	, lng:-51.129512800, proxpnt : [] }
-    pnts[39] = {lat: -29.984490400	, lng: -51.129663000, proxpnt : [] }
-    pnts[40] = {lat: -29.981107700	, lng: -51.129941900, proxpnt : [] }
-    pnts[41] = {lat: -29.981051900	, lng: -51.129190900, proxpnt : [] }
-    pnts[42] = {lat: -29.984508900	, lng: -51.128890500, proxpnt : [] }
-    pnts[43] = {lat: -29.987835700	, lng:-51.128611600, proxpnt : [] }
+    pnts[37] = {lat: -29.987928700	, lng: -51.129362600, proxpnt : [] };
+    pnts[38] = {lat: -29.986181600	, lng:-51.129512800, proxpnt : [] };
+    pnts[39] = {lat: -29.984490400	, lng: -51.129663000, proxpnt : [] };
+    pnts[40] = {lat: -29.981107700	, lng: -51.129941900, proxpnt : [] };
+    pnts[41] = {lat: -29.981051900	, lng: -51.129190900, proxpnt : [] };
+    pnts[42] = {lat: -29.984508900	, lng: -51.128890500, proxpnt : [] };
+    pnts[43] = {lat: -29.987835700	, lng:-51.128611600, proxpnt : [] };
     //fim criação dos pontos
 
     //colocação dos vizinhos
     addpnt(pnts[0],pnts[1]);
+    addpnt(pnts[0],pnts[9]);
     addpnt(pnts[1], pnts[2]);
-
+    addpnt(pnts[1], pnts[8]);
+    addpnt(pnts[2], pnts[3]);
+    addpnt(pnts[2], pnts[7]);
+    addpnt(pnts[3], pnts[4]);
+    addpnt(pnts[3], pnts[6]);
+    addpnt(pnts[4], pnts[5]);
+    addpnt(pnts[5], pnts[6]);
+    addpnt(pnts[5], pnts[14]);
+    addpnt(pnts[6], pnts[7]);
+    addpnt(pnts[6], pnts[13]);
+    addpnt(pnts[7], pnts[8]);
+    addpnt(pnts[7], pnts[12]);
+    addpnt(pnts[8], pnts[9]);
+    addpnt(pnts[8], pnts[11]);
+    addpnt(pnts[9], pnts[10]);
+    addpnt(pnts[10], pnts[11]);
+    addpnt(pnts[10], pnts[18]);
+    addpnt(pnts[11], pnts[12]);
+    addpnt(pnts[12], pnts[13]);
+    addpnt(pnts[12], pnts[17]);
+    addpnt(pnts[13], pnts[14]);
+    addpnt(pnts[13], pnts[16]);
+    addpnt(pnts[14], pnts[15]);
+    addpnt(pnts[15], pnts[16]);
+    addpnt(pnts[15], pnts[25]);
+    addpnt(pnts[16], pnts[17]);
+    addpnt(pnts[16], pnts[24]);
+    addpnt(pnts[17], pnts[23]);
+    addpnt(pnts[18], pnts[19]);
+    addpnt(pnts[19], pnts[20]);
+    addpnt(pnts[19], pnts[31]);
+    addpnt(pnts[20], pnts[21]);
+    addpnt(pnts[20], pnts[30]);
+    addpnt(pnts[21], pnts[22]);
+    addpnt(pnts[22], pnts[23]);
+    addpnt(pnts[22], pnts[29]);
+    addpnt(pnts[23], pnts[24]);
+    addpnt(pnts[23], pnts[28]);
+    addpnt(pnts[24], pnts[25]);
+    addpnt(pnts[24], pnts[27]);
+    addpnt(pnts[25], pnts[26]);
+    addpnt(pnts[26], pnts[27]);
+    addpnt(pnts[26], pnts[36]);
+    addpnt(pnts[27], pnts[28]);
+    addpnt(pnts[28], pnts[35]);
+    addpnt(pnts[28], pnts[29]);
+    addpnt(pnts[29], pnts[34]);
+    addpnt(pnts[30], pnts[31]);
+    addpnt(pnts[30], pnts[33]);
+    addpnt(pnts[31], pnts[32]);
+    addpnt(pnts[32], pnts[33]);
+    addpnt(pnts[32], pnts[40]);
+    addpnt(pnts[33], pnts[34]);
+    addpnt(pnts[34], pnts[35]);
+    addpnt(pnts[35], pnts[39]);
+    addpnt(pnts[36], pnts[37]);
+    addpnt(pnts[37], pnts[43]);
+    addpnt(pnts[37], pnts[38]);
+    addpnt(pnts[38], pnts[39]);
+    addpnt(pnts[39], pnts[42]);
+    addpnt(pnts[39], pnts[40]);
+    addpnt(pnts[40], pnts[41]);
+    addpnt(pnts[41], pnts[42]);
+    addpnt(pnts[42], pnts[43]);
     //fim vizinhos
-
-    //testa vizinhos
-    for (var i = 0; i < pnts[1].proxpnt.length; i++) {
-      console.log(pnts[1].proxpnt[i].lat);
-    }
-    //fim testa vizinhos
-
 
     //cria mapa
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 16,
-      center: pnts[0],
-      mapTypeId: 'terrain'
+      center: pnts[28],
     });
-    var iconBase = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAE9UlEQVRIS31VeWwUZRT/fTOzMzt7THe3IJcKKhC0gsilFIyScEgEERAtVgGVcoVLQI5ajhDAgrQGkEBJQIrhRhCqJggioICBYlAKQooSgtBS2p3ZY3Z2Z2dmzQyUsN1dvr8m7/1+3++99715j+ARx+/3P8lQzHuGHBpGaKaTwdoEApIgcTVo6PrftMNxkGHZHQ6H479M15B0jkgk8rgaCKyBjR0a++2crp74w65V34DuD1hwOtsDpmM7cK92V9jcbgzR9G8Zt3OW0+msaXpfikBIkkYZcW1reO9PNmXzPpshBh+VJKhsD1wF76r88H5xwtDvC17vdw8TkgRCojhdl5VicepyPv7X1aSLiZMH27WTZVMvXEFCVpL8bPfn4FlTqMDOzvb4fBsanQ8EzMj1cKS8IX8ur9+sTSI7PxoBrldnxE5fsOxcblfEzl6EvGV/Eo55qg1836yMUjyXJ3i9B02nJWDWPC5HrvoLFjuaRu4YNQhm/c2oCc8BCSARjVnZMB3aIrL3cHImPZ6Hd32RTPP29i6Xq9YSCNbU7QsdOPqmvHqL7WE0m9sVXI8chNZuB9enG5xjh4EwNEIbd0M9exHu6fmIVV6Cej+zRq5QNFnlX++7L6t1i3xitiJlJKrrBxWwTR9UKJyAyP6jSIQjEGaPg/hJsXWHd20hgis2gXgEOEb0t74fPvRj2fB9v15jeb4tCUrB+crx04sDs1bbk1AUQdayGQguK7PKQbd/ApFthyyI+SZaVTXUqmsQiiYgULQWMBJJdO+GhQrXq0sRkW7dOhNaXf6ycvBYSjsKCydB2XsY8SvXkfXZRGg3bgMsA6qZD6FVm2Hr9DT4kQMQXF6WwnXkDYYwNf84CdTeEf3jF3nil/9JBb09EHqdH7GTlQBFwA/si0TCQPTwqXvd9FpPUD4PlP1HUrhW23618C4R/X69YcgUyqitTwGZtXTP+xjS7FVpfzbPl/MQWrEJ+l0xxc+0awPvntI4kfyiVj9kMp1OwGQJcz6EcuQM4n9eSW7HF58F1+8lhEq3phW3/ok9pSoJ3Lnj949f7I1fupYWaOvSEfzgVxBcuTnJL8wvgFLxCzLx2B458KwrqiPi7dunwiXbcpUDR9MKmEbPF3MQKtkK/X4Z6dbN4ZrxAQLzSjNyHKPfgDBl9DESlKS50ZPnlkgzV/KZ0Pb+vUG3aQG5/N4cc44bDv1mDaI//55RwLtxkcL27LyAWKM5ovxbP3iizWiQMhKyt32OhnGFACHI/no5GsYsyIilWjZDs4r1cYbjnrRGRaCmdpdS8evwYHEZm4nlyB+CxgAoXxYiO37IKCAsmaZyA3rt8rZqNdYSkGW5lRZRqsUpS53q+ctpiXRzL9yFE0AIQWBZGYz61NY0iWzvF+AtXRCiHNwzbrf77oNxHRTFt7RIdKc0Zr5du34rrUjW0mmWPbBoXfqO69AW3vIVUcLaRmb5fD+aoKSFI/n9kxFVS6WZxXa1sipjCdI5zMg9JXOjlJ2bKng8D3o6ZWUGRXFYQtO3KxUnbPKmPaxe1/BIIfNBXZNGq/ygPjHYqLzGyBtJaZd+OBxuqQflEoOl39HOX4rHTlTy5tIxGgJWzuYeZjrcW/q27jlMQlV3Mi7Xp263u65pNGkFGkGyLLfWVTUPSmyoQdM5CZryEIIENEOiNL0q4eAO0TbbbnNzZUrzf/d9Dn+EhdXyAAAAAElFTkSuQmCC';
-    //inserir marcadores no mapa
+    //fim cria mapa
 
-    //desenhar traço no mapa
+    //inserir marcadores no mapa
+    var iconBase = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABO0lEQVQ4T6WTT0oDUQzGvy9jq96hzrxhqFvrBRS6Eq8htt0IghcRlao9STcWvIAiLqTSP9PiIawwicxoSyla6vh2eUl++fLyQiycsnMVVdRBq6qaS90ijGHsqMeb4XD4NJ/CqVEqlTbXPe8C4BGA2f0C32DaSkRO4zh+T31ZYJpcFGmTsreo6Gfb7hPyIIVkgCgIWgCPV0v+jjK97Y/HDWY9Gx6WyP6NayrcZeT7N6DU/1R9KgJsMnLuFYZyHgBMuwy3/ImIFPMAVPXjv4AJoyDoAtzOowCKF0a+uwbRyANQ2CXDMNwRtcccY1RLpPL1kXKN0q76o9FJBnDObXhmbYD7K7bSYWHtsNfrTWZLk0FUz0GpLVsmA5tS8M7S5NkyzVdN34SKmiRWTahhts6QAcTuLPFag7fB83z8J2wadS7Tx8mLAAAAAElFTkSuQmCC';
+    var iconS = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADcklEQVRYR+2XTWxUVRTH/+fc1wH6OYMkmJiALMAqCISPDjgphc6I2riokJIAcUNICWGBGyvGxJgYoxhYaGBRQggENoZAuioJ2mkrNO1gIchX1bjpggAKaWc6BdrOO8e80WmnzXQ6b6R0w9283Pfevf/fO+f/znmPmpubZw3PLj0MoZ1wBuO052n045qamqHkfJoHNYUvHwFo3zgdke9rQ5X7J2o/qX5roWD4Dee8kOktroz8Rl9A/g8jNf3U0QeGV5X8hoVFqVMEfVtCgbmpjWPBikqycZAM1k8Qe6jQ86ymsSjcdS0fEGoKd6izsLY6QM5x4jwerGgQwdfMYAiiYL0i4ASLXQ7mRWOi0qowX5a0RFrdgOQCkASUZash5cvh3bs3Cdp37JhSrB/WhXOHIbobjLL/hH+G0lfF4cjFbCBaV2cGH/Z+mxOAiNj29nrjbOirrx8FSM0fvecvLXhtVRQ9N4UTw5wUVr2pxI1ky7nitl/up2AUoHhoXRVBvoHCnzNAaWu3lXryyUD+DgRKPBUrY/zHbdDTx6MBEGPdZXvkDgADslZC7VF/PVOAUUCxYZ09uZ1Ud6pl3ifbHpcNLSwGPY4nz+UMkC0F2SLjbWz0DPo85YkNm2+AAGq5uLisrfPPeLAi6a1pB8jkGUfYNUAuHpjKI+nXC3447i4FMw6QrweeWQpmHGDGU1BS1e2Jt699XarevQUorPYf1xTqnNv9O3Y8mawwZTOlOxMCypC/AJ6fXlFEMESMNoKeGanbdRpsMpbqTCCuXsOUqAC9ADklFYzEQhFTnuySzpg1G7JkGUZ+v1r20oVIzGlW2SLjEkAvMeiTwpYrnekRiG1cPc9Y1hZR2UOgVcmuWWASWLLCsm90+Xxt1/snA3GRgjUHiyq7P53qy2cg6N9EIp+DaeO/kDIA0InEO1v3q3fuWGqOHlXTcx3c82tuhWhcF8lhMlC9dgNYPyPlzWOps+/S/AWvQAT04N4gGEVOi2fmhil7QQ6aGW+Jh9a/SZrYY4O2MvBymo+URdsZ5kBha1dk2gDSqaJv+xcbwauqapPonfQPlOcCkC2KLwBeRGDmI3A+fCnK4FJA1kGNAWkHBP21oYAv3xrgZl3Gn1NVfPdBMPCRm43yvZec3/OhOd5DpPIhhFQJp0YeeRu2bVs6nO+mbtb9A56QI3nzmpcOAAAAAElFTkSuQmCC';
+    var iconE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADgUlEQVRYR+2XUWgUVxSG/3Nnu00b3CTakjSFRAvBNGoJIia6WdtoWnBMS2qppQR9UvJQqFXIRhFEkGKTrkKlL74UxApFqARa11ZK4ia7jfrQliaGCD64YtQ2DcnGrJpk5xyZgYkbSXZ3VtO8OC/DvWfuPd/858w5dygYDL44meM5CqZGmJfCKffDWLOu6xPWeJ4vau8IfwvQZzP8MB9vqPPtftJ3IKKXQqTCmmdEx31VA4foED8NI7X/FhmBQr4IVWmKFQv1MGNka513sb1xW3iLj5hbQbQu2RmD/yOmsyDXCf+Gn/7IBoTaOyJiLmzY6CXz/uS4rWuzn0SOQCkFQkwEV4SRgEK5ApbZTgncaZB2uKXmXKcTkLQAX3frFmBJ3lso9lTAt3SHBRqJnpb7UzH8eefcUSLZCUGeFRkyuojUl37v+QupQM6c+ViLvhZvywiAwUZNyXbN3NBb2jgNYI+PX9rsKcytjA2OXmUDCWXOC6EXghNI4Ed/bfCuDSMCCoTr3zYw9ZUGrSpjgBbfLy77zecCaQ1/sGhZ3qqx2/cGMGU8eCwAuwZFJfpB0IhVJYin8+uZAtiADMal6A+fEkkjkVbPYsyIhtuVi8lE3JrLGCBVCFIp0zd0zB2PF5YvL9r4N0C4NnyhbO/6X6/buTXvALPljAnsGCCTHEiXI8n232+edhaCBQfINgeeWQgWHGDBQ/CgptqdE+l5c+Wrm/pEgGtDoTXjifjVd9/YZVWcuaQ2S/ZsdmdJyGZllX9JUeHMbogJBbkIUd+vK/nkFJGWMYijz9B2ysJRiOq3ar1CqcZcbnVJAC+oHBQvWo679//K+7z6/Nhcb24r5RSgG0q1NHt/7klWIND5/itw8VYBNwG02rRp5EoUeypcd4YHCvbUto8+dQgC3XrreM3a/elOPq3hLbXEfJCI3rEgme+JUt9VFum7c90F06HpunFSbsV6MThmCZm+F6Tq6bPZAiF9gxAOgPCebTeYB5e8XPy6QDDy8J+4AnLNFq+g/Gl7gVMA+/ljIX0VKzQJ+CNAFU3nkZnQJCEi2tfsC16eN4Bk8LZQfZnSeKkYYghTf/IB5X8BSKXic4DnCiy8Amc7umMKygNwNUTTQBIBY7ShzluQbQ1wsm7Wn1MRfPPhJu8XTjbK9lkyf88nXsoPkPB2MIkQTk4N5/u3bVsxme2mTtY9Au04JVbz4IatAAAAAElFTkSuQmCC';
     for (var i = 0; i < pnts.length; i++) {
-      var marker = new google.maps.Marker({
-        position: pnts[i],
-        map: map,
-        icon: iconBase
-      });
+      if(i == 0) {
+        var marker = new google.maps.Marker({
+          position: pnts[i],
+          map: map,
+          icon: iconS
+        });
+      } else if(i == pnts.length-1){
+        var marker = new google.maps.Marker({
+          position: pnts[i],
+          map: map,
+          icon: iconE
+        });
+      } else {
+        var marker = new google.maps.Marker({
+          position: pnts[i],
+          map: map,
+          icon: iconBase
+        });
+      }
     }
     //fim marcadores
-    var flightPlanCoordinates = [
-      {lat: pnts[0].lat, lng: pnts[0].lng}, {lat: pnts[1].lat, lng: pnts[1].lng}, {lat: pnts[2].lat, lng: pnts[2].lng}
-    ];
-    var flightPath = new google.maps.Polyline({
-      path: flightPlanCoordinates,
-      geodesic: true,
-      strokeColor: '#47c3e1',
-      strokeOpacity: 1.0,
-      strokeWeight: 6
-    });
 
-    flightPath.setMap(map);
-    //fim desenha traço
-  }//fim mapa
+    //MelhorTrajeto code
+    var MelhorRota = [];
+    var MelhorTrajeto = function(pnt1, pnt2,MelhorRota){
+      if(DistTraj(pnt1,pnt2)== 0){
+        return 0;
+      }
+      if(pnt1.proxpnt.length == 1){
+        return 1;
+      }
+      var aux = 1000000;
+      var pntaux;
+      for(var i = 0; i < pnt1.proxpnt.length;i++){
+        if( aux > DistTraj(pnt1.proxpnt[i],pnt2)){
+          aux = DistTraj(pnt1.proxpnt[i],pnt2);
+          pntaux = i;
+        }
+      }//ele pula essas duas linhas de baixo
+      MelhorRota.push({lat: pnt1.lat, lng: pnt1.lng});
+      MelhorRota.push({lat: pnt1.proxpnt[pntaux].lat, lng: pnt1.proxpnt[pntaux].lng});
+      if(MelhorTrajeto(pnt1.proxpnt[pntaux], pnt2,MelhorRota) != 0){
+        MelhorRota.pop();
+        pnt1.proxpnt.slice(pntaux,1);
+        MelhorTrajeto(pnt1, pnt2,MelhorRota);
+      }
+      return 0;
+    }
+    var DistTraj = function(pnt1, pnt2) {
+      var deg2rad = 0.017453292519943295; // === Math.PI / 180
+      var cos = Math.cos;
+      lat1 = pnt1.lat;
+      lon1 = pnt1.lng;
+      lat2 = pnt2.lat;
+      lon2 = pnt2.lng;
+      lat1 *= deg2rad;
+      lon1 *= deg2rad;
+      lat2 *= deg2rad;
+      lon2 *= deg2rad;
+      var diam = 12742; // Diameter of the earth in km (2 * 6371)
+      var dLat = lat2 - lat1;
+      var dLon = lon2 - lon1;
+      var a = ( (1 - cos(dLat)) +
+      (1 - cos(dLon)) * cos(lat1) * cos(lat2)
+    ) / 2;
 
+    return diam * Math.asin(Math.sqrt(a)) * 1000;
+  };
 
-  </script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIXYzYtSgWxddk7Rv7vWmVGv2hPHMDe3c&callback=initMap"></script>
+  MelhorTrajeto(pnts[0],pnts[43],MelhorRota);
+  //Melhor trajeto code
+  //DesenhaRota code
+  var DesenharRota = new google.maps.Polyline({
+    path: MelhorRota,
+    geodesic: true,
+    strokeColor: '#bae074',
+    strokeOpacity: 0.6,
+    strokeWeight: 7
+  });
 
+  DesenharRota.setMap(map);
+  //fim DesenhaRota code
+}//fim mapa
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIXYzYtSgWxddk7Rv7vWmVGv2hPHMDe3c&callback=initMap"></script>
 </body>
 </html>

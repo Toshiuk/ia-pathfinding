@@ -7,10 +7,10 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <TITLE>Pathfinding Flavio e Olavio </TITLE>
+  <title>Pathfinding Flavio e Olavio </title>
 </head>
 
-<body>
+<body onload="initBodyMap()">
   <div class="container">
     <header class="row">
       <h1> Flavio e Olavio - Pathfinding no Bairro Sarandi - Porto Alegre/RS </h1>
@@ -31,18 +31,18 @@
         </form>
         <div id="form"><button onclick="initMap()" id ="send" type="button" class="btn btn-raised btn-primary btn-block ripple-effect" >Calcula rota</button>
         </br>
-        <!-- <label for="formGroupExampleInput3">Rota danificada</label>
-        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder=""> -->
+        <label for="formGroupExampleInput3">Rota danificada</label>
+        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="">
       </div>
     </aside>
   </div>
 </div>
 
 <script src="js/script.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIXYzYtSgWxddk7Rv7vWmVGv2hPHMDe3c&callback=initMap"></script>
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIXYzYtSgWxddk7Rv7vWmVGv2hPHMDe3c"></script>
 </body>
 </html>

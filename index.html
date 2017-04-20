@@ -28,11 +28,15 @@
             <label for="formGroupExampleInput2">  Ponto destino</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Número de 0 à 43">
           </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput3">Rota danificada</label>
+            <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Se quiser, digite um ponto que deseja RETIRAR do caminho"></br>
+          </div>
+          <div id ="button">
+            <button onclick="initMap()" id ="send" type="button" class="btn btn-raised btn-primary btn-block ripple-effect" >Calcular a melhor rota</button>
+          </div>
         </form>
-        <div id="form"><button onclick="initMap()" id ="send" type="button" class="btn btn-raised btn-primary btn-block ripple-effect" >Calcula rota</button>
-        </br>
-        <label for="formGroupExampleInput3">Rota danificada</label>
-        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="">
+        <p id="cam"></br> Caminhos ...</p>
       </div>
     </aside>
   </div>

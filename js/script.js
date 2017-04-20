@@ -300,6 +300,9 @@ function initMap() {
   }
   //MelhorTrajeto code
   var MelhorTrajeto = function(pnt1, pnt2,MelhorRota){
+    for(var i =0; i < pnts.length;i++){
+      rmvpnt(pnts[i],pnt1);
+    }
     if(DistTraj(pnt1,pnt2) == 0){
       console.log('Distancia do ponto ' + pnt1.id+' até o destino:'+DistTraj(pnt1,pnt2));
       return 0;
@@ -314,12 +317,17 @@ function initMap() {
         pntaux = i;
       }
     }
+    if(pnt1.proxpnt.length == 0)
+    return 1;
     MelhorRota.push({lat: pnt1.lat, lng: pnt1.lng});
     MelhorRota.push({lat: pnt1.proxpnt[pntaux].lat, lng: pnt1.proxpnt[pntaux].lng});
     rmvpnt(pnt1.proxpnt[pntaux],pnt1);
-    MelhorTrajeto(pnt1.proxpnt[pntaux], pnt2,MelhorRota);
 
-
+    if(MelhorTrajeto(pnt1.proxpnt[pntaux], pnt2,MelhorRota) == 1){
+      MelhorRota.pop();
+      MelhorRota.pop();
+      return MelhorTrajeto(pnt1,pnt2,MelhorRota);
+    }
     return 0;
   }
   var DistTraj = function(pnt1, pnt2) {
@@ -343,6 +351,7 @@ function initMap() {
   return diam * Math.asin(Math.sqrt(a)) * 1000;
 };
 MelhorTrajeto(pnts[p1],pnts[p2],MelhorRota);
+
 //Melhor trajeto code
 //DesenhaRota code
 var DesenharRota = new google.maps.Polyline({

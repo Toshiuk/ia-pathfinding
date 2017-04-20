@@ -135,35 +135,57 @@ function initMap() {
     center: pnts[28],
   });
   //fim cria mapa
-  //fim define ruas
+  //Desenharua code
+  //var Ruas = [];
+  // for(var c = 0; c < pnts.length; c++){
+  //   for(var d = 0; d < pnts[c].proxpnt.length; d++){
+  //     Ruas.push({lat: pnts[c].proxpnt[d].lat, lng: pnts[c].proxpnt[d].lng});
+  //   }
+  // }
+  // var DesenharRota = new google.maps.Polyline({
+  //   path: Ruas,
+  //   geodesic: true,
+  //   strokeColor: 'red',
+  //   strokeOpacity: 0.3,
+  //   strokeWeight: 10
+  // });
+  // DesenharRota.setMap(map);
+  //fim Desenharua code
   //inserir marcadores no mapa
-  var iconBase = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABO0lEQVQ4T6WTT0oDUQzGvy9jq96hzrxhqFvrBRS6Eq8htt0IghcRlao9STcWvIAiLqTSP9PiIawwicxoSyla6vh2eUl++fLyQiycsnMVVdRBq6qaS90ijGHsqMeb4XD4NJ/CqVEqlTbXPe8C4BGA2f0C32DaSkRO4zh+T31ZYJpcFGmTsreo6Gfb7hPyIIVkgCgIWgCPV0v+jjK97Y/HDWY9Gx6WyP6NayrcZeT7N6DU/1R9KgJsMnLuFYZyHgBMuwy3/ImIFPMAVPXjv4AJoyDoAtzOowCKF0a+uwbRyANQ2CXDMNwRtcccY1RLpPL1kXKN0q76o9FJBnDObXhmbYD7K7bSYWHtsNfrTWZLk0FUz0GpLVsmA5tS8M7S5NkyzVdN34SKmiRWTahhts6QAcTuLPFag7fB83z8J2wadS7Tx8mLAAAAAElFTkSuQmCC';
+  var iconBase = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABI0lEQVQ4T63TvyvFYRTH8dc1KWRTysDEYGTyoxQjMbDczT9AShn8yISEYjBbTFJYDSilzGI0KMTIHdGj56uv2/f6Ks54fryf55zzOQV/tEKF+loMoDXGb3CMl/L8ckAVJtGAQ1zFgnYM4R6beEtAaUAo3sAOWiKoIyZextgdiphKIGlAcJ6kErK6W8UeuiJQAgg9zyK8FBJ+smH0Yh6vCWAEj1hBdw7gDAuox0ECmME2HlCdAyihGePhwX8DhL6esISenB+cYhF1YdXpIc7hAvs5gKCHvjj0UnqNQUDnGMV0BchyFFhnFNTXGkN+ENI6dtEYxZIW0hqeMRZj76EoS8oTaMJRmZQHcYstfBZnARJ/DfrRFh3X8ZjCCr9ZpWv89ZF/AKfIPBEuXXchAAAAAElFTkSuQmCC';
   var iconS = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADcklEQVRYR+2XTWxUVRTH/+fc1wH6OYMkmJiALMAqCISPDjgphc6I2riokJIAcUNICWGBGyvGxJgYoxhYaGBRQggENoZAuioJ2mkrNO1gIchX1bjpggAKaWc6BdrOO8e80WmnzXQ6b6R0w9283Pfevf/fO+f/znmPmpubZw3PLj0MoZ1wBuO052n045qamqHkfJoHNYUvHwFo3zgdke9rQ5X7J2o/qX5roWD4Dee8kOktroz8Rl9A/g8jNf3U0QeGV5X8hoVFqVMEfVtCgbmpjWPBikqycZAM1k8Qe6jQ86ymsSjcdS0fEGoKd6izsLY6QM5x4jwerGgQwdfMYAiiYL0i4ASLXQ7mRWOi0qowX5a0RFrdgOQCkASUZash5cvh3bs3Cdp37JhSrB/WhXOHIbobjLL/hH+G0lfF4cjFbCBaV2cGH/Z+mxOAiNj29nrjbOirrx8FSM0fvecvLXhtVRQ9N4UTw5wUVr2pxI1ky7nitl/up2AUoHhoXRVBvoHCnzNAaWu3lXryyUD+DgRKPBUrY/zHbdDTx6MBEGPdZXvkDgADslZC7VF/PVOAUUCxYZ09uZ1Ud6pl3ifbHpcNLSwGPY4nz+UMkC0F2SLjbWz0DPo85YkNm2+AAGq5uLisrfPPeLAi6a1pB8jkGUfYNUAuHpjKI+nXC3447i4FMw6QrweeWQpmHGDGU1BS1e2Jt699XarevQUorPYf1xTqnNv9O3Y8mawwZTOlOxMCypC/AJ6fXlFEMESMNoKeGanbdRpsMpbqTCCuXsOUqAC9ADklFYzEQhFTnuySzpg1G7JkGUZ+v1r20oVIzGlW2SLjEkAvMeiTwpYrnekRiG1cPc9Y1hZR2UOgVcmuWWASWLLCsm90+Xxt1/snA3GRgjUHiyq7P53qy2cg6N9EIp+DaeO/kDIA0InEO1v3q3fuWGqOHlXTcx3c82tuhWhcF8lhMlC9dgNYPyPlzWOps+/S/AWvQAT04N4gGEVOi2fmhil7QQ6aGW+Jh9a/SZrYY4O2MvBymo+URdsZ5kBha1dk2gDSqaJv+xcbwauqapPonfQPlOcCkC2KLwBeRGDmI3A+fCnK4FJA1kGNAWkHBP21oYAv3xrgZl3Gn1NVfPdBMPCRm43yvZec3/OhOd5DpPIhhFQJp0YeeRu2bVs6nO+mbtb9A56QI3nzmpcOAAAAAElFTkSuQmCC';
   var iconE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADgUlEQVRYR+2XUWgUVxSG/3Nnu00b3CTakjSFRAvBNGoJIia6WdtoWnBMS2qppQR9UvJQqFXIRhFEkGKTrkKlL74UxApFqARa11ZK4ia7jfrQliaGCD64YtQ2DcnGrJpk5xyZgYkbSXZ3VtO8OC/DvWfuPd/858w5dygYDL44meM5CqZGmJfCKffDWLOu6xPWeJ4vau8IfwvQZzP8MB9vqPPtftJ3IKKXQqTCmmdEx31VA4foED8NI7X/FhmBQr4IVWmKFQv1MGNka513sb1xW3iLj5hbQbQu2RmD/yOmsyDXCf+Gn/7IBoTaOyJiLmzY6CXz/uS4rWuzn0SOQCkFQkwEV4SRgEK5ApbZTgncaZB2uKXmXKcTkLQAX3frFmBJ3lso9lTAt3SHBRqJnpb7UzH8eefcUSLZCUGeFRkyuojUl37v+QupQM6c+ViLvhZvywiAwUZNyXbN3NBb2jgNYI+PX9rsKcytjA2OXmUDCWXOC6EXghNI4Ed/bfCuDSMCCoTr3zYw9ZUGrSpjgBbfLy77zecCaQ1/sGhZ3qqx2/cGMGU8eCwAuwZFJfpB0IhVJYin8+uZAtiADMal6A+fEkkjkVbPYsyIhtuVi8lE3JrLGCBVCFIp0zd0zB2PF5YvL9r4N0C4NnyhbO/6X6/buTXvALPljAnsGCCTHEiXI8n232+edhaCBQfINgeeWQgWHGDBQ/CgptqdE+l5c+Wrm/pEgGtDoTXjifjVd9/YZVWcuaQ2S/ZsdmdJyGZllX9JUeHMbogJBbkIUd+vK/nkFJGWMYijz9B2ysJRiOq3ar1CqcZcbnVJAC+oHBQvWo679//K+7z6/Nhcb24r5RSgG0q1NHt/7klWIND5/itw8VYBNwG02rRp5EoUeypcd4YHCvbUto8+dQgC3XrreM3a/elOPq3hLbXEfJCI3rEgme+JUt9VFum7c90F06HpunFSbsV6MThmCZm+F6Tq6bPZAiF9gxAOgPCebTeYB5e8XPy6QDDy8J+4AnLNFq+g/Gl7gVMA+/ljIX0VKzQJ+CNAFU3nkZnQJCEi2tfsC16eN4Bk8LZQfZnSeKkYYghTf/IB5X8BSKXic4DnCiy8Amc7umMKygNwNUTTQBIBY7ShzluQbQ1wsm7Wn1MRfPPhJu8XTjbK9lkyf88nXsoPkPB2MIkQTk4N5/u3bVsxme2mTtY9Au04JVbz4IatAAAAAElFTkSuQmCC';
   var p1 = document.getElementById('formGroupExampleInput').value;
   var p2 = document.getElementById('formGroupExampleInput2').value;
-    //var p3 = document.getElementById('formGroupExampleInput3').value;
-
-
+  //var p3 = document.getElementById('formGroupExampleInput3').value;
   for (var i = 0; i < pnts.length; i++) {
     if(i == 0){
-      var marker = new google.maps.Marker({
-        position: pnts[i],
-        map: map,
-        icon: iconBase,
-        title: 'Ponto 0'
-      });
+      if(p1 == 0){
+        var marker = new google.maps.Marker({
+          position: pnts[p1],
+          map: map,
+          icon: iconS,
+          title: 'Ponto Partida: ' + pnts[p1].id
+        });
+      } else {
+        var marker = new google.maps.Marker({
+          position: pnts[i],
+          map: map,
+          icon: iconBase,
+          title: 'Ponto 0'
+        });
+      }
     }
     else if(i == p1) {
       var marker = new google.maps.Marker({
-        position: pnts[i],
+        position: pnts[p1],
         map: map,
         icon: iconS,
         title: 'Ponto Partida: ' + pnts[p1].id
       });
     } else if(i == p2){
       var marker = new google.maps.Marker({
-        position: pnts[i],
+        position: pnts[p2],
         map: map,
         icon: iconE,
         title: 'Ponto Destino: ' + pnts[p2].id
@@ -225,8 +247,6 @@ function initMap() {
 
   return diam * Math.asin(Math.sqrt(a)) * 1000;
 };
-
-
 MelhorTrajeto(pnts[p1],pnts[p2],MelhorRota);
 //Melhor trajeto code
 //DesenhaRota code
@@ -234,10 +254,10 @@ var DesenharRota = new google.maps.Polyline({
   path: MelhorRota,
   geodesic: true,
   strokeColor: '#bae074',
-  strokeOpacity: 0.6,
-  strokeWeight: 7
+  strokeOpacity: 0.8,
+  strokeWeight: 10
 });
 DesenharRota.setMap(map);
-
 //fim DesenhaRota code
+
 }//fim mapa

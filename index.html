@@ -2,8 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -30,13 +29,17 @@
           </div>
           <div class="form-group">
             <label for="formGroupExampleInput3">Rota danificada</label>
-            <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Se quiser, digite um ponto que deseja RETIRAR do caminho"></br>
+            <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Se quiser, RETIRE um ponto do caminho"></br>
           </div>
           <div id ="button">
             <button onclick="initMap()" id ="send" type="button" class="btn btn-raised btn-primary btn-block ripple-effect" >Calcular a melhor rota</button>
+          </div></br>
+          <div id="lista">
+            <ul id="cam">
+              <li>...</li>
+            </ul>
           </div>
         </form>
-        <p id="cam"></br> Caminhos ...</p>
       </div>
     </aside>
   </div>

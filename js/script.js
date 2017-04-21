@@ -62,10 +62,8 @@ function initBodyMap(){
       title: 'Ponto '+ pnts[i].id
     });
   }
-  //fim marcadores
-
 }
-
+//fim marcadores
 function initMap() {
   //criação dos pontos
   var pnts = new Array();
@@ -240,10 +238,10 @@ function initMap() {
     if(i == 0){
       if(p1 == 0){
         var marker = new google.maps.Marker({
-          position: pnts[p1],
+          position: pnts[i],
           map: map,
           icon: iconS,
-          title: 'Ponto Partida: ' + pnts[p1].id
+          title: 'Ponto Partida: ' + pnts[i].id
         });
       } else if(p2 == 0){
         var marker = new google.maps.Marker({
@@ -292,7 +290,6 @@ function initMap() {
       });
     }
   }
-
   //fim marcadores
 
   //MelhorTrajeto code
@@ -305,7 +302,6 @@ function initMap() {
       }
     }
   }
-  //MelhorTrajeto code
   var MelhorTrajeto = function(pnt1, pnt2,MelhorRota){
     for(var i =0; i < pnts.length;i++){
       rmvpnt(pnts[i],pnt1);
@@ -315,7 +311,6 @@ function initMap() {
       return 0;
     }
     console.log('Distancia do ponto ' + pnt1.id + ' até o destino:' +DistTraj(pnt1,pnt2));
-
     var aux = 1000000;
     var pntaux;
     for(var i = 0; i < pnt1.proxpnt.length;i++){
@@ -326,8 +321,8 @@ function initMap() {
     }
     if(pnt1.proxpnt.length == 0)
     return 1;
-    MelhorRota.push({lat: pnt1.lat, lng: pnt1.lng});
-    MelhorRota.push({lat: pnt1.proxpnt[pntaux].lat, lng: pnt1.proxpnt[pntaux].lng});
+    MelhorRota.push({id: pnt1.id, lat: pnt1.lat, lng: pnt1.lng});
+    MelhorRota.push({id: pnt1.proxpnt[pntaux].id, lat: pnt1.proxpnt[pntaux].lat, lng: pnt1.proxpnt[pntaux].lng});
     rmvpnt(pnt1.proxpnt[pntaux],pnt1);
 
     if(MelhorTrajeto(pnt1.proxpnt[pntaux], pnt2,MelhorRota) == 1){
@@ -337,6 +332,7 @@ function initMap() {
     }
     return 0;
   }
+
   var DistTraj = function(pnt1, pnt2) {
     var deg2rad = 0.017453292519943295; // === Math.PI / 180
     var cos = Math.cos;
@@ -358,8 +354,29 @@ function initMap() {
   return diam * Math.asin(Math.sqrt(a)) * 1000;
 };
 MelhorTrajeto(pnts[p1],pnts[p2],MelhorRota);
-
-//Melhor trajeto code
+function squash(arr){
+  var tmp = [];
+  for(var i = 0; i < arr.length; i++){
+    if(tmp.indexOf(arr[i].id) == -1){
+      tmp.push(arr[i].id);
+    }
+  }
+  return tmp;
+}
+//adicionar rota no HTML
+var MelhorRota2 = squash(MelhorRota);
+var subs = [];
+for(var i = 1; i < MelhorRota2.length; i++){
+  console.log('Valor do i' + i);
+  if(i == (MelhorRota2.length-1)){
+    subs[i] = "<li> Você chegou ao destino. </li>";
+  } else {
+    subs[i] = "<li> Vá até o ponto " + MelhorRota2[i] + ".</li>";
+  }
+}
+document.getElementById("cam").innerHTML = subs.join('</br>');
+//fim adicionar rota no HTML
+//fim Melhor trajeto code
 //DesenhaRota code
 var DesenharRota = new google.maps.Polyline({
   path: MelhorRota,

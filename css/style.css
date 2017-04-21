@@ -31,3 +31,7 @@ div[role="main"] {
 div[role="main"], nav, aside {
     height: 45em;
 }
+ul {
+  list-style-type: none;
+  margin-left: -2.625em;
+}

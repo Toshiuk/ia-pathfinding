@@ -374,7 +374,7 @@ for(var i = 1; i < MelhorRota2.length; i++){
     subs[i] = "<li> Vá até o ponto " + MelhorRota2[i] + ".</li>";
   }
 }
-document.getElementById("cam").innerHTML = subs.join('</br>');
+document.getElementById("cam").innerHTML = subs.join('');
 //fim adicionar rota no HTML
 //fim Melhor trajeto code
 //DesenhaRota code

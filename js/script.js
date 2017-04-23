@@ -217,7 +217,7 @@ function initMap() {
   var iconBase = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABI0lEQVQ4T63TvyvFYRTH8dc1KWRTysDEYGTyoxQjMbDczT9AShn8yISEYjBbTFJYDSilzGI0KMTIHdGj56uv2/f6Ks54fryf55zzOQV/tEKF+loMoDXGb3CMl/L8ckAVJtGAQ1zFgnYM4R6beEtAaUAo3sAOWiKoIyZextgdiphKIGlAcJ6kErK6W8UeuiJQAgg9zyK8FBJ+smH0Yh6vCWAEj1hBdw7gDAuox0ECmME2HlCdAyihGePhwX8DhL6esISenB+cYhF1YdXpIc7hAvs5gKCHvjj0UnqNQUDnGMV0BchyFFhnFNTXGkN+ENI6dtEYxZIW0hqeMRZj76EoS8oTaMJRmZQHcYstfBZnARJ/DfrRFh3X8ZjCCr9ZpWv89ZF/AKfIPBEuXXchAAAAAElFTkSuQmCC';
   var iconS = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADcklEQVRYR+2XTWxUVRTH/+fc1wH6OYMkmJiALMAqCISPDjgphc6I2riokJIAcUNICWGBGyvGxJgYoxhYaGBRQggENoZAuioJ2mkrNO1gIchX1bjpggAKaWc6BdrOO8e80WmnzXQ6b6R0w9283Pfevf/fO+f/znmPmpubZw3PLj0MoZ1wBuO052n045qamqHkfJoHNYUvHwFo3zgdke9rQ5X7J2o/qX5roWD4Dee8kOktroz8Rl9A/g8jNf3U0QeGV5X8hoVFqVMEfVtCgbmpjWPBikqycZAM1k8Qe6jQ86ymsSjcdS0fEGoKd6izsLY6QM5x4jwerGgQwdfMYAiiYL0i4ASLXQ7mRWOi0qowX5a0RFrdgOQCkASUZash5cvh3bs3Cdp37JhSrB/WhXOHIbobjLL/hH+G0lfF4cjFbCBaV2cGH/Z+mxOAiNj29nrjbOirrx8FSM0fvecvLXhtVRQ9N4UTw5wUVr2pxI1ky7nitl/up2AUoHhoXRVBvoHCnzNAaWu3lXryyUD+DgRKPBUrY/zHbdDTx6MBEGPdZXvkDgADslZC7VF/PVOAUUCxYZ09uZ1Ud6pl3ifbHpcNLSwGPY4nz+UMkC0F2SLjbWz0DPo85YkNm2+AAGq5uLisrfPPeLAi6a1pB8jkGUfYNUAuHpjKI+nXC3447i4FMw6QrweeWQpmHGDGU1BS1e2Jt699XarevQUorPYf1xTqnNv9O3Y8mawwZTOlOxMCypC/AJ6fXlFEMESMNoKeGanbdRpsMpbqTCCuXsOUqAC9ADklFYzEQhFTnuySzpg1G7JkGUZ+v1r20oVIzGlW2SLjEkAvMeiTwpYrnekRiG1cPc9Y1hZR2UOgVcmuWWASWLLCsm90+Xxt1/snA3GRgjUHiyq7P53qy2cg6N9EIp+DaeO/kDIA0InEO1v3q3fuWGqOHlXTcx3c82tuhWhcF8lhMlC9dgNYPyPlzWOps+/S/AWvQAT04N4gGEVOi2fmhil7QQ6aGW+Jh9a/SZrYY4O2MvBymo+URdsZ5kBha1dk2gDSqaJv+xcbwauqapPonfQPlOcCkC2KLwBeRGDmI3A+fCnK4FJA1kGNAWkHBP21oYAv3xrgZl3Gn1NVfPdBMPCRm43yvZec3/OhOd5DpPIhhFQJp0YeeRu2bVs6nO+mbtb9A56QI3nzmpcOAAAAAElFTkSuQmCC';
   var iconE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADgUlEQVRYR+2XUWgUVxSG/3Nnu00b3CTakjSFRAvBNGoJIia6WdtoWnBMS2qppQR9UvJQqFXIRhFEkGKTrkKlL74UxApFqARa11ZK4ia7jfrQliaGCD64YtQ2DcnGrJpk5xyZgYkbSXZ3VtO8OC/DvWfuPd/858w5dygYDL44meM5CqZGmJfCKffDWLOu6xPWeJ4vau8IfwvQZzP8MB9vqPPtftJ3IKKXQqTCmmdEx31VA4foED8NI7X/FhmBQr4IVWmKFQv1MGNka513sb1xW3iLj5hbQbQu2RmD/yOmsyDXCf+Gn/7IBoTaOyJiLmzY6CXz/uS4rWuzn0SOQCkFQkwEV4SRgEK5ApbZTgncaZB2uKXmXKcTkLQAX3frFmBJ3lso9lTAt3SHBRqJnpb7UzH8eefcUSLZCUGeFRkyuojUl37v+QupQM6c+ViLvhZvywiAwUZNyXbN3NBb2jgNYI+PX9rsKcytjA2OXmUDCWXOC6EXghNI4Ed/bfCuDSMCCoTr3zYw9ZUGrSpjgBbfLy77zecCaQ1/sGhZ3qqx2/cGMGU8eCwAuwZFJfpB0IhVJYin8+uZAtiADMal6A+fEkkjkVbPYsyIhtuVi8lE3JrLGCBVCFIp0zd0zB2PF5YvL9r4N0C4NnyhbO/6X6/buTXvALPljAnsGCCTHEiXI8n232+edhaCBQfINgeeWQgWHGDBQ/CgptqdE+l5c+Wrm/pEgGtDoTXjifjVd9/YZVWcuaQ2S/ZsdmdJyGZllX9JUeHMbogJBbkIUd+vK/nkFJGWMYijz9B2ysJRiOq3ar1CqcZcbnVJAC+oHBQvWo679//K+7z6/Nhcb24r5RSgG0q1NHt/7klWIND5/itw8VYBNwG02rRp5EoUeypcd4YHCvbUto8+dQgC3XrreM3a/elOPq3hLbXEfJCI3rEgme+JUt9VFum7c90F06HpunFSbsV6MThmCZm+F6Tq6bPZAiF9gxAOgPCebTeYB5e8XPy6QDDy8J+4AnLNFq+g/Gl7gVMA+/ljIX0VKzQJ+CNAFU3nkZnQJCEi2tfsC16eN4Bk8LZQfZnSeKkYYghTf/IB5X8BSKXic4DnCiy8Amc7umMKygNwNUTTQBIBY7ShzluQbQ1wsm7Wn1MRfPPhJu8XTjbK9lkyf88nXsoPkPB2MIkQTk4N5/u3bVsxme2mTtY9Au04JVbz4IatAAAAAElFTkSuQmCC';
-  var iconO = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB4UlEQVRYR+3Wz4uOURTA8c+YIgtlFrJRyk4szSApC7ExFmwUC5oif4AUiQXZWJMN2SgyK0qyEJmmWE9CKUsLpdj4rVPP6JnXfd57n8fLu5m7vOfcc773/Lj3jBjyGhmyf4sAXSMwho1YVaXwHebwoW1K2wAsx2EcwSb+SN8PPMN13MDnEphSgD24gjUlRvEWx/Agp18CcA5nc4YS8p84gwv9zuYAujqv+zyFi00Q/QAi7Hc73Lz3SERiNx6mbDUBRMG9apHzHOcbrMeXXsUmgOO4nLPaUj6Fa6UA0U7jLR3k1J9iewlAPDLvE32ec5CTf0fY/lhXTKUgKJ/UlG7hQM56g/wO9tdkm6vH6vdWCmAfpv8RwN7ezvrfAJO4l0vBNkTBzK/bONgxBZG+iOj8msDzHMDKqgiXdHTadOxbVYSfcgAhn8WWAQM8xo6SNgydo7g6YID4yuObXrCaXsJleIm1A4J4jQ34WgoQevGB3B/AgxSDyk48Sl0m9x2fxvm/jMIJXGqykQOIc/GfB0SJbt1P3PxkP+ehXGp0VzWSrSuMRuQ8RrJk2EvaMOVnKQ5VQ+lWjPYoRZ/PVEPpzVTBdamBpguvqAaM1YiJJ8byF1jwyJREqzQFJbY66SwCDD0CvwBIq0sh/IuMnQAAAABJRU5ErkJggg==';
+  var iconO = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAB1ElEQVQ4T5XVyavPURjH8dfNuMcC2Rh2ioV/wFBshDJmKhtFKUqGfwALFkRKIklc92Jhowz/gLKxJUOGwt4YfW7n1PHr+7v3d8/ue77PeZ9n+DzPGdK9ZmIbNmAF5hazT3iO+7iL773Hhzp4O3C2gfS500ccxnBr0AKn4CL2NwZf8BSvEduFWIXZjc0lHMKf7LXAyw3sM47iNn73uDgNu3AGc8q/QA+2wIR5qzn4GOu7ctTYzMMjLC17yflwPEwBElISH89eYk0x3jgBdD5eFE8/YFGAe3G93LIbI3iAtQNC9+FqPR/gPWxCCpAwkrN4PSh0OmMVn4XRAN9hAe5ge5OjyUCjyc14G+AvTMUpnOyp6KDQ0ziGny0wmyc6VDwINM4cr8AachSf0netiaA15DdtUb6WoiQFk4G2RRkJMFK5UQiRwLV+zdun+umaK+XMzirsV8W7SGd5kUE/bhv+Eywrvf0eS2ovJ3fp26x0yjpE+eNBH2J1YxDZjOmwrkyaA+UjnqZqN1O5HmpytqfIrE6dC2Xi/DdtMr7ON9BwvuEZkpK/WIyVpSvqPTlzpGt8VYOtOIc0/ngrOcuAHW2NuiZ2/s/AFmTatE9AerY+AQH96L3xH1J4duEnl2GMAAAAAElFTkSuQmCC';
   var p1 = document.getElementById('formGroupExampleInput').value;
   var p2 = document.getElementById('formGroupExampleInput2').value;
   //começo obstaculo
@@ -366,15 +366,14 @@ function squash(arr){
 //adicionar rota no HTML
 var MelhorRota2 = squash(MelhorRota);
 var subs = [];
-for(var i = 1; i < MelhorRota2.length; i++){
-  console.log('Valor do i' + i);
+for(var i = 0; i < MelhorRota2.length; i++){
   if(i == (MelhorRota2.length-1)){
     subs[i] = "<li> Você chegou ao destino. </li>";
   } else {
-    subs[i] = "<li> Vá até o ponto " + MelhorRota2[i] + ".</li>";
+    subs[i] = "<li> Saia do ponto " + MelhorRota2[i] +" e vá até o " + MelhorRota2[i+1] + ".</li>";
   }
 }
-document.getElementById("cam").innerHTML = subs.join('</br>');
+document.getElementById("cam").innerHTML = subs.join('');
 //fim adicionar rota no HTML
 //fim Melhor trajeto code
 //DesenhaRota code

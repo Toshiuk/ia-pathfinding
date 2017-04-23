@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   <link href="css/style.css" rel="stylesheet">
@@ -9,7 +10,7 @@
   <title>Pathfinding Flavio e Olavio </title>
 </head>
 
-<body onload="initBodyMap()">
+<body onload="initBodyMap()" class="bd">
   <div class="container">
     <header class="row">
       <h1> Flavio e Olavio - Pathfinding no Bairro Sarandi - Porto Alegre/RS </h1>
@@ -31,17 +32,17 @@
             <label for="formGroupExampleInput3">Rota danificada</label>
             <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Se quiser, RETIRE um ponto do caminho"></br>
           </div>
-          <div id ="button">
-            <button onclick="initMap()" id ="send" type="button" class="btn btn-raised btn-primary btn-block ripple-effect" >Calcular a melhor rota</button>
+          <div id ="button"class="form-group">
+            <button onclick="initMap()" id ="send" type="button" class="button" >Calcular a melhor rota</button>
           </div></br>
-          <div id="lista">
-            <ul id="cam">
-              <li>...</li>
-            </ul>
-          </div>
         </form>
-      </div>
-    </aside>
+        <div id="lista" class="form-group">
+          <ul id="cam">
+            <li>...</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
   </div>
 </div>
 

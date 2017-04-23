@@ -1,37 +1,84 @@
 .container, .container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0.938em;
+    padding-left: 0.938em;
     background-color: #f9f9f9;
-    margin-top: 6.250em;
+    margin-top: 6.25em;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2), 0 0.375em 1.25em 0 rgba(0, 0, 0, 0.19);
 }
 .row {
     margin-bottom: 0%;
 }
 header {
-    padding-bottom: 0.750em;
-    padding-top: 0.750em;
-    background-color: #f5f5f5;
-    background-color: rgba(86,61,124,.15);
-    border: 1px solid #ddd;
-    border: 1px solid rgba(86,61,124,.2);
+    padding-bottom: 0.75em;
+    padding-top: 0.75em;
+    background-color: #082135;
+    border: 0.063em solid #ddd;
+    border: 0.063em solid rgba(86,61,124,.2);
     text-align: center;
+      font-family: 'Slabo 27px', serif;
+      color: snow;
 }
 [class*="col-"], nav, aside, section, div[role="main"] {
+    font-family: 'Slabo 40px', serif;
     padding-top:1%;
     padding-bottom: 12%;
     background-color: #f5f5f5;
     background-color: rgba(86,61,124,.15);
-    border: 1px solid #ddd;
-    border: 1px solid rgba(86,61,124,.2);
+    border: 0.063em solid #ddd;
+    border: 0.063em solid rgba(86,61,124,.2);
     text-align: center;
 }
+aside.col-md-4 {
+  padding-bottom: 40px;
+  background-color: mintcream;
+}
+
 div[role="main"] {
     background-color: #fff;
 }
 div[role="main"], nav, aside {
     height: 45em;
 }
-ul {
+ul#cam {
   list-style-type: none;
-  margin-left: -2.625em;
+  font-size: 125%;
+  margin-left: 0;
+  margin-right: 2em;
+  margin-top: 1.375em;
+  margin-bottom: 1.375em;
+}
+.button {
+  align-items: center;
+  background-color: #020b0e;
+  border: 0.063em solid #020b0e;
+  box-sizing: border-box;
+  color: snow;
+  display: flex;
+  height: 2.813em;
+  letter-spacing: 0.063em;
+  padding: .8em 1em;
+  margin-left:4.375em;
+  transition: all .3s ease;
+  font-size: 120%;
+}
+.button:hover {
+  background-color: snow;
+  border-color: #cdd2d6;
+  color: #000000;
+}
+
+#lista {
+  align-items: center;
+  background-color: white;
+  border: 0.063em solid #cdd2d6;
+  box-sizing: border-box;
+  color: #000000;
+  height:17.5em;
+}
+
+label{
+  font-size: 140%;
+}
+html, body.bd{
+  background-color: #b0c1d0;
 }

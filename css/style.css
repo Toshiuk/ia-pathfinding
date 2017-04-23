@@ -30,7 +30,7 @@ header {
 }
 aside.col-md-4 {
   padding-bottom: 40px;
-  background-color: mintcream;
+  background-color: #e7f1ec;
 }
 
 div[role="main"] {
@@ -41,11 +41,9 @@ div[role="main"], nav, aside {
 }
 ul#cam {
   list-style-type: none;
-  font-size: 125%;
+  font-size: 105%;
   margin-left: 0;
   margin-right: 2em;
-  margin-top: 1.375em;
-  margin-bottom: 1.375em;
 }
 .button {
   align-items: center;

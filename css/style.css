@@ -65,9 +65,10 @@ ul#cam {
   color: snow;
   display: flex;
   height: 2.813em;
-  letter-spacing: 0.063em;
+  letter-spacing: 0.163em;
   padding: .8em 1em;
-  margin-left:4.375em;
+  margin-left:25%;
+  margin-right: 25%;
   transition: all .3s ease;
   font-size: 120%;
 }

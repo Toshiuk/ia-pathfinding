@@ -1,49 +1,49 @@
 function initBodyMap(){
   var pnts = new Array();
-  pnts[0] = {id: 0,lat: -29.981386500, lng: -51.135263400, proxpnt : [] };
-  pnts[1] = {id: 1, lat: -29.983115000, lng: -51.135134700, proxpnt : [] };
-  pnts[2] = {id: 2, lat: -29.984806300, lng: -51.135048900, proxpnt : [] };
-  pnts[3] = {id: 3, lat:-29.986516200, lng: -51.134898700, proxpnt : [] };
-  pnts[4] = {id: 4, lat: -29.988244600, lng: -51.134705500, proxpnt : [] };
-  pnts[5] = {id: 5, lat: -29.988114500, lng: -51.133997400, proxpnt : [] };
-  pnts[6] = {id: 6, lat: -29.986441800, lng: -51.134233500, proxpnt : [] };
-  pnts[7] = {id: 7, lat: -29.984750600, lng: -51.134276400, proxpnt : [] };
-  pnts[8] = {id: 8, lat:-29.983077800, lng: -51.134383700, proxpnt : [] };
-  pnts[9] = {id: 9, lat: -29.981405100, lng: 	-51.134405100, proxpnt : [] };
-  pnts[10] = {id: 10, lat:-29.981367900, lng:	-51.133697000, proxpnt : [] };
-  pnts[11] = {id: 11, lat: -29.982984900	, lng: -51.133589700, proxpnt : [] };
-  pnts[12] = {id: 12, lat: -29.984713400	, lng: -51.133439500, proxpnt : [] };
-  pnts[13] = {id: 13, lat: -29.986404700	, lng: -51.133289300, proxpnt : [] };
-  pnts[14] = {id: 14, lat: -29.988077300	, lng: -51.133267900, proxpnt : [] };
-  pnts[15] = {id: 15, lat: -29.988077300	, lng: -51.132495400, proxpnt : [] };
-  pnts[16] = {id: 16, lat: -29.986367500	, lng: -51.132559800, proxpnt : [] };
-  pnts[17] = {id: 17, lat: -29.984676200	, lng: -51.132731400, proxpnt : [] };
-  pnts[18] = {id: 18, lat: -29.981293500	, lng: -51.132924600, proxpnt : [] };
-  pnts[19] = {id: 19, lat: -29.981256400	, lng: -51.132173500, proxpnt : [] };
-  pnts[20] = {id: 20, lat: -29.982260000	, lng: -51.132087700, proxpnt : [] };
-  pnts[21] = {id: 21, lat: -29.982947700	, lng:-51.132087700, proxpnt : [] };
-  pnts[22] = {id: 22, lat: -29.983654000	, lng: -51.132023300, proxpnt : [] };
-  pnts[23] = {id: 23, lat: -29.984676200	, lng: -51.131894600, proxpnt : [] };
-  pnts[24] = {id: 24, lat: -29.986311700	, lng: -51.131787300, proxpnt : [] };
-  pnts[25] = {id: 25, lat: -29.987928700	, lng:-51.131658600, proxpnt : [] };
-  pnts[26] = {id: 26, lat: -29.987891500	, lng: -51.130971900, proxpnt : [] };
-  pnts[27] = {id: 27, lat: -29.986330300	, lng: -51.131100700, proxpnt : [] };
-  pnts[28] = {id: 28, lat: -29.984620500	, lng: -51.131143600, proxpnt : [] };
-  pnts[29] = {id: 29, lat:-29.983579600	, lng: -51.131293800, proxpnt : [] };
-  pnts[30] = {id: 30, lat:-29.982222900	, lng: -51.131379600, proxpnt : [] };
-  pnts[31] = {id: 31, lat: -29.981144900	, lng: -51.131401100, proxpnt : [] };
-  pnts[32] = {id: 32, lat: -29.981182000		, lng: -51.130757300, proxpnt : [] };
-  pnts[33] = {id: 33, lat: -29.982241400	, lng: -51.130607100, proxpnt : []};
-  pnts[34] = {id: 34, lat: -29.983486700		, lng: -51.130521300, proxpnt : [] };
-  pnts[35] = {id: 35, lat: 	-29.984527500	, lng: -51.130456900, proxpnt : [] };
-  pnts[36] = {id: 36, lat: -29.987947300		, lng: -51.130199400, proxpnt : [] };
-  pnts[37] = {id: 37, lat: -29.987928700	, lng: -51.129362600, proxpnt : [] };
-  pnts[38] = {id: 38, lat: -29.986181600	, lng:-51.129512800, proxpnt : [] };
-  pnts[39] = {id: 39, lat: -29.984490400	, lng: -51.129663000, proxpnt : [] };
-  pnts[40] = {id: 40, lat: -29.981107700	, lng: -51.129941900, proxpnt : [] };
-  pnts[41] = {id: 41, lat: -29.981051900	, lng: -51.129190900, proxpnt : [] };
-  pnts[42] = {id: 42, lat: -29.984508900	, lng: -51.128890500, proxpnt : [] };
-  pnts[43] = {id: 43, lat: -29.987835700	, lng:-51.128611600, proxpnt : [] };
+  pnts[0] = {label: '0', id: 0,lat: -29.981386500, lng: -51.135263400, proxpnt : [] };
+  pnts[1] = {label: '1',id: 1, lat: -29.983115000, lng: -51.135134700, proxpnt : [] };
+  pnts[2] = {label: '2',id: 2, lat: -29.984806300, lng: -51.135048900, proxpnt : [] };
+  pnts[3] = {label: '3',id: 3, lat:-29.986516200, lng: -51.134898700, proxpnt : [] };
+  pnts[4] = {label: '4',id: 4, lat: -29.988244600, lng: -51.134705500, proxpnt : [] };
+  pnts[5] = {label: '5',id: 5, lat: -29.988114500, lng: -51.133997400, proxpnt : [] };
+  pnts[6] = {label: '6',id: 6, lat: -29.986441800, lng: -51.134233500, proxpnt : [] };
+  pnts[7] = {label: '7',id: 7, lat: -29.984750600, lng: -51.134276400, proxpnt : [] };
+  pnts[8] = {label: '8',id: 8, lat:-29.983077800, lng: -51.134383700, proxpnt : [] };
+  pnts[9] = {label: '9',id: 9, lat: -29.981405100, lng: 	-51.134405100, proxpnt : [] };
+  pnts[10] = {label: '10',id: 10, lat:-29.981367900, lng:	-51.133697000, proxpnt : [] };
+  pnts[11] = {label: '11',id: 11, lat: -29.982984900	, lng: -51.133589700, proxpnt : [] };
+  pnts[12] = {label: '12',id: 12, lat: -29.984713400	, lng: -51.133439500, proxpnt : [] };
+  pnts[13] = {label: '13',id: 13, lat: -29.986404700	, lng: -51.133289300, proxpnt : [] };
+  pnts[14] = {label: '14',id: 14, lat: -29.988077300	, lng: -51.133267900, proxpnt : [] };
+  pnts[15] = {label: '15',id: 15, lat: -29.988077300	, lng: -51.132495400, proxpnt : [] };
+  pnts[16] = {label: '16',id: 16, lat: -29.986367500	, lng: -51.132559800, proxpnt : [] };
+  pnts[17] = {label: '17',id: 17, lat: -29.984676200	, lng: -51.132731400, proxpnt : [] };
+  pnts[18] = {label: '18',id: 18, lat: -29.981293500	, lng: -51.132924600, proxpnt : [] };
+  pnts[19] = {label: '19',id: 19, lat: -29.981256400	, lng: -51.132173500, proxpnt : [] };
+  pnts[20] = {label: '20',id: 20, lat: -29.982260000	, lng: -51.132087700, proxpnt : [] };
+  pnts[21] = {label: '21',id: 21, lat: -29.982947700	, lng:-51.132087700, proxpnt : [] };
+  pnts[22] = {label: '22',id: 22, lat: -29.983654000	, lng: -51.132023300, proxpnt : [] };
+  pnts[23] = {label: '23',id: 23, lat: -29.984676200	, lng: -51.131894600, proxpnt : [] };
+  pnts[24] = {label: '24',id: 24, lat: -29.986311700	, lng: -51.131787300, proxpnt : [] };
+  pnts[25] = {label: '25',id: 25, lat: -29.987928700	, lng:-51.131658600, proxpnt : [] };
+  pnts[26] = {label: '26',id: 26, lat: -29.987891500	, lng: -51.130971900, proxpnt : [] };
+  pnts[27] = {label: '27',id: 27, lat: -29.986330300	, lng: -51.131100700, proxpnt : [] };
+  pnts[28] = {label: '28',id: 28, lat: -29.984620500	, lng: -51.131143600, proxpnt : [] };
+  pnts[29] = {label: '29',id: 29, lat:-29.983579600	, lng: -51.131293800, proxpnt : [] };
+  pnts[30] = {label: '30',id: 30, lat:-29.982222900	, lng: -51.131379600, proxpnt : [] };
+  pnts[31] = {label: '31',id: 31, lat: -29.981144900	, lng: -51.131401100, proxpnt : [] };
+  pnts[32] = {label: '32',id: 32, lat: -29.981182000		, lng: -51.130757300, proxpnt : [] };
+  pnts[33] = {label: '33',id: 33, lat: -29.982241400	, lng: -51.130607100, proxpnt : []};
+  pnts[34] = {label: '34',id: 34, lat: -29.983486700		, lng: -51.130521300, proxpnt : [] };
+  pnts[35] = {label: '35',id: 35, lat: 	-29.984527500	, lng: -51.130456900, proxpnt : [] };
+  pnts[36] = {label: '36',id: 36, lat: -29.987947300		, lng: -51.130199400, proxpnt : [] };
+  pnts[37] = {label: '37',id: 37, lat: -29.987928700	, lng: -51.129362600, proxpnt : [] };
+  pnts[38] = {label: '38',id: 38, lat: -29.986181600	, lng:-51.129512800, proxpnt : [] };
+  pnts[39] = {label: '39',id: 39, lat: -29.984490400	, lng: -51.129663000, proxpnt : [] };
+  pnts[40] = {label: '40',id: 40, lat: -29.981107700	, lng: -51.129941900, proxpnt : [] };
+  pnts[41] = {label: '41',id: 41, lat: -29.981051900	, lng: -51.129190900, proxpnt : [] };
+  pnts[42] = {label: '42',id: 42, lat: -29.984508900	, lng: -51.128890500, proxpnt : [] };
+  pnts[43] = {label: '43',id: 43, lat: -29.987835700	, lng:-51.128611600, proxpnt : [] };
   //fim criação dos pontos
   //cria mapa
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -52,13 +52,19 @@ function initBodyMap(){
   });
   //fim cria mapa
   //inserir marcadores no mapa
-  var iconBase = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABI0lEQVQ4T63TvyvFYRTH8dc1KWRTysDEYGTyoxQjMbDczT9AShn8yISEYjBbTFJYDSilzGI0KMTIHdGj56uv2/f6Ks54fryf55zzOQV/tEKF+loMoDXGb3CMl/L8ckAVJtGAQ1zFgnYM4R6beEtAaUAo3sAOWiKoIyZextgdiphKIGlAcJ6kErK6W8UeuiJQAgg9zyK8FBJ+smH0Yh6vCWAEj1hBdw7gDAuox0ECmME2HlCdAyihGePhwX8DhL6esISenB+cYhF1YdXpIc7hAvs5gKCHvjj0UnqNQUDnGMV0BchyFFhnFNTXGkN+ENI6dtEYxZIW0hqeMRZj76EoS8oTaMJRmZQHcYstfBZnARJ/DfrRFh3X8ZjCCr9ZpWv89ZF/AKfIPBEuXXchAAAAAElFTkSuQmCC';
+  var iconBase ='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC9ElEQVRYR7WWS2sUQRSFz60JMRtFEHFhMtU9D5+Q4CK6iKioGEEDooKK4E9QjI8sdKcb8wB3/gBBBUEDAUVRTEIWihFiFllkOv3ITLIKKi4SNdN1pXUiY9LT3fOa5VSdc76aunNvEcr4JJoT6ViMzzP4EBR2KahNnpyEWBCgKQX1jpR6YmSzM1FtKcrGbZq2QwH3wOjy8kI0TAqDLoseM2dmwvzDzJCOa5ddVn1CiMYws+J1pdRPERNXDdt+EKQLBEhq2n1iXCknePVeAvdnHOdGKY+SAGmp32bwnWrCV7TE6MnM2r1+Xr4AiXhivyA1AkDUAgCAS4SOjG1/WPsLrU2gtJQTDGqtUXjBhscNx2kPBUjHEyeZ1FBtwwtugjoNy3pd7L3mChJSPhWgs3UBUHhkZO2LQQCUatG+QGBjPQAUeMF0nM0lAbZLqbsgsx7hK57CzTdP53Jz//4hxWHJeLyDSIzVE0ApsdfMmh/9AaQ8TKC39QQgQQczljXqC6DremtM8ed6AriC2izLmvQFSKVSG7Cc/xZh4FTKqBaXf62fn59f9AXwvky2aFMksLPShCAdgSczjtMW2AeSUvYSqOTwqAaMwX0zjnMzEKCedaCUaDez5ngggLeYiMdHBIkD1Zx2tVYxJsxZe0/oLCgAHBEk3tQSAEyXjFnrYSQAb1NKai8BHK8NBE83O/ruYQznIwN4D1BBahICTdVCMPj0jOM89/MJfpJJ/TqB+6oBIMaLzKx9opRH2KNUJKV8RaCjFUJ8Rb6h1ZgzcpUCQNf1LaT4kwC2lgtB4DMZx3kW3JwiuKY1bR+7GC6nHvyaTtk1UCxIato5YjyOMicUYci07VMAVNj5wmrgP31Kym6ABkL6/diS6x7L5XJLYeHeelkAniAt9bsMvuVnzgrvaV1Dp2EY36OEVwTwt0npAwB3F4coVqOisbGrnPCKAf5AtOj9EHytADGYJ1ywbftH1JOv7Cv7CooD/lyHQpORtbwRG1pwfnC/AfUDCDAO7gZXAAAAAElFTkSuQmCC';
   //var p3 = document.getElementById('formGroupExampleInput3').value;
   for (var i = 0; i < pnts.length; i++) {
     var marker = new google.maps.Marker({
       position: pnts[i],
       map: map,
       icon: iconBase,
+      label: {
+        fontSize: "1em",
+        fontWeight: "bold",
+        text: pnts[i].label,
+        color: 'white',
+      },
       title: 'Ponto '+ pnts[i].id
     });
   }
@@ -74,50 +80,50 @@ function initMap() {
   function addpnt1(pntf1, pntf2) {
     pntf1.proxpnt.push(pntf2);
   }
-  pnts[0] = {id: 0,lat: -29.981386500, lng: -51.135263400, proxpnt : [] };
-  pnts[1] = {id: 1, lat: -29.983115000, lng: -51.135134700, proxpnt : [] };
-  pnts[2] = {id: 2, lat: -29.984806300, lng: -51.135048900, proxpnt : [] };
-  pnts[3] = {id: 3, lat:-29.986516200, lng: -51.134898700, proxpnt : [] };
-  pnts[4] = {id: 4, lat: -29.988244600, lng: -51.134705500, proxpnt : [] };
-  pnts[5] = {id: 5, lat: -29.988114500, lng: -51.133997400, proxpnt : [] };
-  pnts[6] = {id: 6, lat: -29.986441800, lng: -51.134233500, proxpnt : [] };
-  pnts[7] = {id: 7, lat: -29.984750600, lng: -51.134276400, proxpnt : [] };
-  pnts[8] = {id: 8, lat:-29.983077800, lng: -51.134383700, proxpnt : [] };
-  pnts[9] = {id: 9, lat: -29.981405100, lng: 	-51.134405100, proxpnt : [] };
-  pnts[10] = {id: 10, lat:-29.981367900, lng:	-51.133697000, proxpnt : [] };
-  pnts[11] = {id: 11, lat: -29.982984900	, lng: -51.133589700, proxpnt : [] };
-  pnts[12] = {id: 12, lat: -29.984713400	, lng: -51.133439500, proxpnt : [] };
-  pnts[13] = {id: 13, lat: -29.986404700	, lng: -51.133289300, proxpnt : [] };
-  pnts[14] = {id: 14, lat: -29.988077300	, lng: -51.133267900, proxpnt : [] };
-  pnts[15] = {id: 15, lat: -29.988077300	, lng: -51.132495400, proxpnt : [] };
-  pnts[16] = {id: 16, lat: -29.986367500	, lng: -51.132559800, proxpnt : [] };
-  pnts[17] = {id: 17, lat: -29.984676200	, lng: -51.132731400, proxpnt : [] };
-  pnts[18] = {id: 18, lat: -29.981293500	, lng: -51.132924600, proxpnt : [] };
-  pnts[19] = {id: 19, lat: -29.981256400	, lng: -51.132173500, proxpnt : [] };
-  pnts[20] = {id: 20, lat: -29.982260000	, lng: -51.132087700, proxpnt : [] };
-  pnts[21] = {id: 21, lat: -29.982947700	, lng:-51.132087700, proxpnt : [] };
-  pnts[22] = {id: 22, lat: -29.983654000	, lng: -51.132023300, proxpnt : [] };
-  pnts[23] = {id: 23, lat: -29.984676200	, lng: -51.131894600, proxpnt : [] };
-  pnts[24] = {id: 24, lat: -29.986311700	, lng: -51.131787300, proxpnt : [] };
-  pnts[25] = {id: 25, lat: -29.987928700	, lng:-51.131658600, proxpnt : [] };
-  pnts[26] = {id: 26, lat: -29.987891500	, lng: -51.130971900, proxpnt : [] };
-  pnts[27] = {id: 27, lat: -29.986330300	, lng: -51.131100700, proxpnt : [] };
-  pnts[28] = {id: 28, lat: -29.984620500	, lng: -51.131143600, proxpnt : [] };
-  pnts[29] = {id: 29, lat:-29.983579600	, lng: -51.131293800, proxpnt : [] };
-  pnts[30] = {id: 30, lat:-29.982222900	, lng: -51.131379600, proxpnt : [] };
-  pnts[31] = {id: 31, lat: -29.981144900	, lng: -51.131401100, proxpnt : [] };
-  pnts[32] = {id: 32, lat: -29.981182000		, lng: -51.130757300, proxpnt : [] };
-  pnts[33] = {id: 33, lat: -29.982241400	, lng: -51.130607100, proxpnt : []};
-  pnts[34] = {id: 34, lat: -29.983486700		, lng: -51.130521300, proxpnt : [] };
-  pnts[35] = {id: 35, lat: 	-29.984527500	, lng: -51.130456900, proxpnt : [] };
-  pnts[36] = {id: 36, lat: -29.987947300		, lng: -51.130199400, proxpnt : [] };
-  pnts[37] = {id: 37, lat: -29.987928700	, lng: -51.129362600, proxpnt : [] };
-  pnts[38] = {id: 38, lat: -29.986181600	, lng:-51.129512800, proxpnt : [] };
-  pnts[39] = {id: 39, lat: -29.984490400	, lng: -51.129663000, proxpnt : [] };
-  pnts[40] = {id: 40, lat: -29.981107700	, lng: -51.129941900, proxpnt : [] };
-  pnts[41] = {id: 41, lat: -29.981051900	, lng: -51.129190900, proxpnt : [] };
-  pnts[42] = {id: 42, lat: -29.984508900	, lng: -51.128890500, proxpnt : [] };
-  pnts[43] = {id: 43, lat: -29.987835700	, lng:-51.128611600, proxpnt : [] };
+  pnts[0] = {label: '0', id: 0,lat: -29.981386500, lng: -51.135263400, proxpnt : [] };
+  pnts[1] = {label: '1',id: 1, lat: -29.983115000, lng: -51.135134700, proxpnt : [] };
+  pnts[2] = {label: '2',id: 2, lat: -29.984806300, lng: -51.135048900, proxpnt : [] };
+  pnts[3] = {label: '3',id: 3, lat:-29.986516200, lng: -51.134898700, proxpnt : [] };
+  pnts[4] = {label: '4',id: 4, lat: -29.988244600, lng: -51.134705500, proxpnt : [] };
+  pnts[5] = {label: '5',id: 5, lat: -29.988114500, lng: -51.133997400, proxpnt : [] };
+  pnts[6] = {label: '6',id: 6, lat: -29.986441800, lng: -51.134233500, proxpnt : [] };
+  pnts[7] = {label: '7',id: 7, lat: -29.984750600, lng: -51.134276400, proxpnt : [] };
+  pnts[8] = {label: '8',id: 8, lat:-29.983077800, lng: -51.134383700, proxpnt : [] };
+  pnts[9] = {label: '9',id: 9, lat: -29.981405100, lng: 	-51.134405100, proxpnt : [] };
+  pnts[10] = {label: '10',id: 10, lat:-29.981367900, lng:	-51.133697000, proxpnt : [] };
+  pnts[11] = {label: '11',id: 11, lat: -29.982984900	, lng: -51.133589700, proxpnt : [] };
+  pnts[12] = {label: '12',id: 12, lat: -29.984713400	, lng: -51.133439500, proxpnt : [] };
+  pnts[13] = {label: '13',id: 13, lat: -29.986404700	, lng: -51.133289300, proxpnt : [] };
+  pnts[14] = {label: '14',id: 14, lat: -29.988077300	, lng: -51.133267900, proxpnt : [] };
+  pnts[15] = {label: '15',id: 15, lat: -29.988077300	, lng: -51.132495400, proxpnt : [] };
+  pnts[16] = {label: '16',id: 16, lat: -29.986367500	, lng: -51.132559800, proxpnt : [] };
+  pnts[17] = {label: '17',id: 17, lat: -29.984676200	, lng: -51.132731400, proxpnt : [] };
+  pnts[18] = {label: '18',id: 18, lat: -29.981293500	, lng: -51.132924600, proxpnt : [] };
+  pnts[19] = {label: '19',id: 19, lat: -29.981256400	, lng: -51.132173500, proxpnt : [] };
+  pnts[20] = {label: '20',id: 20, lat: -29.982260000	, lng: -51.132087700, proxpnt : [] };
+  pnts[21] = {label: '21',id: 21, lat: -29.982947700	, lng:-51.132087700, proxpnt : [] };
+  pnts[22] = {label: '22',id: 22, lat: -29.983654000	, lng: -51.132023300, proxpnt : [] };
+  pnts[23] = {label: '23',id: 23, lat: -29.984676200	, lng: -51.131894600, proxpnt : [] };
+  pnts[24] = {label: '24',id: 24, lat: -29.986311700	, lng: -51.131787300, proxpnt : [] };
+  pnts[25] = {label: '25',id: 25, lat: -29.987928700	, lng:-51.131658600, proxpnt : [] };
+  pnts[26] = {label: '26',id: 26, lat: -29.987891500	, lng: -51.130971900, proxpnt : [] };
+  pnts[27] = {label: '27',id: 27, lat: -29.986330300	, lng: -51.131100700, proxpnt : [] };
+  pnts[28] = {label: '28',id: 28, lat: -29.984620500	, lng: -51.131143600, proxpnt : [] };
+  pnts[29] = {label: '29',id: 29, lat:-29.983579600	, lng: -51.131293800, proxpnt : [] };
+  pnts[30] = {label: '30',id: 30, lat:-29.982222900	, lng: -51.131379600, proxpnt : [] };
+  pnts[31] = {label: '31',id: 31, lat: -29.981144900	, lng: -51.131401100, proxpnt : [] };
+  pnts[32] = {label: '32',id: 32, lat: -29.981182000		, lng: -51.130757300, proxpnt : [] };
+  pnts[33] = {label: '33',id: 33, lat: -29.982241400	, lng: -51.130607100, proxpnt : []};
+  pnts[34] = {label: '34',id: 34, lat: -29.983486700		, lng: -51.130521300, proxpnt : [] };
+  pnts[35] = {label: '35',id: 35, lat: 	-29.984527500	, lng: -51.130456900, proxpnt : [] };
+  pnts[36] = {label: '36',id: 36, lat: -29.987947300		, lng: -51.130199400, proxpnt : [] };
+  pnts[37] = {label: '37',id: 37, lat: -29.987928700	, lng: -51.129362600, proxpnt : [] };
+  pnts[38] = {label: '38',id: 38, lat: -29.986181600	, lng:-51.129512800, proxpnt : [] };
+  pnts[39] = {label: '39',id: 39, lat: -29.984490400	, lng: -51.129663000, proxpnt : [] };
+  pnts[40] = {label: '40',id: 40, lat: -29.981107700	, lng: -51.129941900, proxpnt : [] };
+  pnts[41] = {label: '41',id: 41, lat: -29.981051900	, lng: -51.129190900, proxpnt : [] };
+  pnts[42] = {label: '42',id: 42, lat: -29.984508900	, lng: -51.128890500, proxpnt : [] };
+  pnts[43] = {label: '43',id: 43, lat: -29.987835700	, lng:-51.128611600, proxpnt : [] };
   //fim criação dos pontos
 
   //colocação dos vizinhos
@@ -214,7 +220,7 @@ function initMap() {
   }
   //fim Desenharua code
   //inserir marcadores no mapa
-  var iconBase = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABI0lEQVQ4T63TvyvFYRTH8dc1KWRTysDEYGTyoxQjMbDczT9AShn8yISEYjBbTFJYDSilzGI0KMTIHdGj56uv2/f6Ks54fryf55zzOQV/tEKF+loMoDXGb3CMl/L8ckAVJtGAQ1zFgnYM4R6beEtAaUAo3sAOWiKoIyZextgdiphKIGlAcJ6kErK6W8UeuiJQAgg9zyK8FBJ+smH0Yh6vCWAEj1hBdw7gDAuox0ECmME2HlCdAyihGePhwX8DhL6esISenB+cYhF1YdXpIc7hAvs5gKCHvjj0UnqNQUDnGMV0BchyFFhnFNTXGkN+ENI6dtEYxZIW0hqeMRZj76EoS8oTaMJRmZQHcYstfBZnARJ/DfrRFh3X8ZjCCr9ZpWv89ZF/AKfIPBEuXXchAAAAAElFTkSuQmCC';
+  var iconBase = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC9ElEQVRYR7WWS2sUQRSFz60JMRtFEHFhMtU9D5+Q4CK6iKioGEEDooKK4E9QjI8sdKcb8wB3/gBBBUEDAUVRTEIWihFiFllkOv3ITLIKKi4SNdN1pXUiY9LT3fOa5VSdc76aunNvEcr4JJoT6ViMzzP4EBR2KahNnpyEWBCgKQX1jpR6YmSzM1FtKcrGbZq2QwH3wOjy8kI0TAqDLoseM2dmwvzDzJCOa5ddVn1CiMYws+J1pdRPERNXDdt+EKQLBEhq2n1iXCknePVeAvdnHOdGKY+SAGmp32bwnWrCV7TE6MnM2r1+Xr4AiXhivyA1AkDUAgCAS4SOjG1/WPsLrU2gtJQTDGqtUXjBhscNx2kPBUjHEyeZ1FBtwwtugjoNy3pd7L3mChJSPhWgs3UBUHhkZO2LQQCUatG+QGBjPQAUeMF0nM0lAbZLqbsgsx7hK57CzTdP53Jz//4hxWHJeLyDSIzVE0ApsdfMmh/9AaQ8TKC39QQgQQczljXqC6DremtM8ed6AriC2izLmvQFSKVSG7Cc/xZh4FTKqBaXf62fn59f9AXwvky2aFMksLPShCAdgSczjtMW2AeSUvYSqOTwqAaMwX0zjnMzEKCedaCUaDez5ngggLeYiMdHBIkD1Zx2tVYxJsxZe0/oLCgAHBEk3tQSAEyXjFnrYSQAb1NKai8BHK8NBE83O/ruYQznIwN4D1BBahICTdVCMPj0jOM89/MJfpJJ/TqB+6oBIMaLzKx9opRH2KNUJKV8RaCjFUJ8Rb6h1ZgzcpUCQNf1LaT4kwC2lgtB4DMZx3kW3JwiuKY1bR+7GC6nHvyaTtk1UCxIato5YjyOMicUYci07VMAVNj5wmrgP31Kym6ABkL6/diS6x7L5XJLYeHeelkAniAt9bsMvuVnzgrvaV1Dp2EY36OEVwTwt0npAwB3F4coVqOisbGrnPCKAf5AtOj9EHytADGYJ1ywbftH1JOv7Cv7CooD/lyHQpORtbwRG1pwfnC/AfUDCDAO7gZXAAAAAElFTkSuQmCC';
   var iconS = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADcklEQVRYR+2XTWxUVRTH/+fc1wH6OYMkmJiALMAqCISPDjgphc6I2riokJIAcUNICWGBGyvGxJgYoxhYaGBRQggENoZAuioJ2mkrNO1gIchX1bjpggAKaWc6BdrOO8e80WmnzXQ6b6R0w9283Pfevf/fO+f/znmPmpubZw3PLj0MoZ1wBuO052n045qamqHkfJoHNYUvHwFo3zgdke9rQ5X7J2o/qX5roWD4Dee8kOktroz8Rl9A/g8jNf3U0QeGV5X8hoVFqVMEfVtCgbmpjWPBikqycZAM1k8Qe6jQ86ymsSjcdS0fEGoKd6izsLY6QM5x4jwerGgQwdfMYAiiYL0i4ASLXQ7mRWOi0qowX5a0RFrdgOQCkASUZash5cvh3bs3Cdp37JhSrB/WhXOHIbobjLL/hH+G0lfF4cjFbCBaV2cGH/Z+mxOAiNj29nrjbOirrx8FSM0fvecvLXhtVRQ9N4UTw5wUVr2pxI1ky7nitl/up2AUoHhoXRVBvoHCnzNAaWu3lXryyUD+DgRKPBUrY/zHbdDTx6MBEGPdZXvkDgADslZC7VF/PVOAUUCxYZ09uZ1Ud6pl3ifbHpcNLSwGPY4nz+UMkC0F2SLjbWz0DPo85YkNm2+AAGq5uLisrfPPeLAi6a1pB8jkGUfYNUAuHpjKI+nXC3447i4FMw6QrweeWQpmHGDGU1BS1e2Jt699XarevQUorPYf1xTqnNv9O3Y8mawwZTOlOxMCypC/AJ6fXlFEMESMNoKeGanbdRpsMpbqTCCuXsOUqAC9ADklFYzEQhFTnuySzpg1G7JkGUZ+v1r20oVIzGlW2SLjEkAvMeiTwpYrnekRiG1cPc9Y1hZR2UOgVcmuWWASWLLCsm90+Xxt1/snA3GRgjUHiyq7P53qy2cg6N9EIp+DaeO/kDIA0InEO1v3q3fuWGqOHlXTcx3c82tuhWhcF8lhMlC9dgNYPyPlzWOps+/S/AWvQAT04N4gGEVOi2fmhil7QQ6aGW+Jh9a/SZrYY4O2MvBymo+URdsZ5kBha1dk2gDSqaJv+xcbwauqapPonfQPlOcCkC2KLwBeRGDmI3A+fCnK4FJA1kGNAWkHBP21oYAv3xrgZl3Gn1NVfPdBMPCRm43yvZec3/OhOd5DpPIhhFQJp0YeeRu2bVs6nO+mbtb9A56QI3nzmpcOAAAAAElFTkSuQmCC';
   var iconE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADgUlEQVRYR+2XUWgUVxSG/3Nnu00b3CTakjSFRAvBNGoJIia6WdtoWnBMS2qppQR9UvJQqFXIRhFEkGKTrkKlL74UxApFqARa11ZK4ia7jfrQliaGCD64YtQ2DcnGrJpk5xyZgYkbSXZ3VtO8OC/DvWfuPd/858w5dygYDL44meM5CqZGmJfCKffDWLOu6xPWeJ4vau8IfwvQZzP8MB9vqPPtftJ3IKKXQqTCmmdEx31VA4foED8NI7X/FhmBQr4IVWmKFQv1MGNka513sb1xW3iLj5hbQbQu2RmD/yOmsyDXCf+Gn/7IBoTaOyJiLmzY6CXz/uS4rWuzn0SOQCkFQkwEV4SRgEK5ApbZTgncaZB2uKXmXKcTkLQAX3frFmBJ3lso9lTAt3SHBRqJnpb7UzH8eefcUSLZCUGeFRkyuojUl37v+QupQM6c+ViLvhZvywiAwUZNyXbN3NBb2jgNYI+PX9rsKcytjA2OXmUDCWXOC6EXghNI4Ed/bfCuDSMCCoTr3zYw9ZUGrSpjgBbfLy77zecCaQ1/sGhZ3qqx2/cGMGU8eCwAuwZFJfpB0IhVJYin8+uZAtiADMal6A+fEkkjkVbPYsyIhtuVi8lE3JrLGCBVCFIp0zd0zB2PF5YvL9r4N0C4NnyhbO/6X6/buTXvALPljAnsGCCTHEiXI8n232+edhaCBQfINgeeWQgWHGDBQ/CgptqdE+l5c+Wrm/pEgGtDoTXjifjVd9/YZVWcuaQ2S/ZsdmdJyGZllX9JUeHMbogJBbkIUd+vK/nkFJGWMYijz9B2ysJRiOq3ar1CqcZcbnVJAC+oHBQvWo679//K+7z6/Nhcb24r5RSgG0q1NHt/7klWIND5/itw8VYBNwG02rRp5EoUeypcd4YHCvbUto8+dQgC3XrreM3a/elOPq3hLbXEfJCI3rEgme+JUt9VFum7c90F06HpunFSbsV6MThmCZm+F6Tq6bPZAiF9gxAOgPCebTeYB5e8XPy6QDDy8J+4AnLNFq+g/Gl7gVMA+/ljIX0VKzQJ+CNAFU3nkZnQJCEi2tfsC16eN4Bk8LZQfZnSeKkYYghTf/IB5X8BSKXic4DnCiy8Amc7umMKygNwNUTTQBIBY7ShzluQbQ1wsm7Wn1MRfPPhJu8XTjbK9lkyf88nXsoPkPB2MIkQTk4N5/u3bVsxme2mTtY9Au04JVbz4IatAAAAAElFTkSuQmCC';
   var iconO = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAB1ElEQVQ4T5XVyavPURjH8dfNuMcC2Rh2ioV/wFBshDJmKhtFKUqGfwALFkRKIklc92Jhowz/gLKxJUOGwt4YfW7n1PHr+7v3d8/ue77PeZ9n+DzPGdK9ZmIbNmAF5hazT3iO+7iL773Hhzp4O3C2gfS500ccxnBr0AKn4CL2NwZf8BSvEduFWIXZjc0lHMKf7LXAyw3sM47iNn73uDgNu3AGc8q/QA+2wIR5qzn4GOu7ctTYzMMjLC17yflwPEwBElISH89eYk0x3jgBdD5eFE8/YFGAe3G93LIbI3iAtQNC9+FqPR/gPWxCCpAwkrN4PSh0OmMVn4XRAN9hAe5ge5OjyUCjyc14G+AvTMUpnOyp6KDQ0ziGny0wmyc6VDwINM4cr8AachSf0netiaA15DdtUb6WoiQFk4G2RRkJMFK5UQiRwLV+zdun+umaK+XMzirsV8W7SGd5kUE/bhv+Eywrvf0eS2ovJ3fp26x0yjpE+eNBH2J1YxDZjOmwrkyaA+UjnqZqN1O5HmpytqfIrE6dC2Xi/DdtMr7ON9BwvuEZkpK/WIyVpSvqPTlzpGt8VYOtOIc0/ngrOcuAHW2NuiZ2/s/AFmTatE9AerY+AQH96L3xH1J4duEnl2GMAAAAAElFTkSuQmCC';
@@ -241,6 +247,12 @@ function initMap() {
           position: pnts[i],
           map: map,
           icon: iconS,
+          label: {
+            fontSize: "1em",
+            fontWeight: "bold",
+            text: pnts[i].label,
+            color: 'white',
+          },
           title: 'Ponto Partida: ' + pnts[i].id
         });
       } else if(p2 == 0){
@@ -248,6 +260,12 @@ function initMap() {
           position: pnts[i],
           map: map,
           icon: iconE,
+          label: {
+            fontSize: "1em",
+            fontWeight: "bold",
+            text: pnts[i].label,
+            color: 'white',
+          },
           title: 'Ponto Destino: ' + pnts[i].id
         });
       }
@@ -256,6 +274,12 @@ function initMap() {
           position: pnts[i],
           map: map,
           icon: iconBase,
+          label: {
+            fontSize: "1em",
+            fontWeight: "bold",
+            text: pnts[i].label,
+            color: 'white',
+          },
           title: 'Ponto 0'
         });
       }
@@ -264,8 +288,7 @@ function initMap() {
       var marker = new google.maps.Marker({
         position: pnts[i],
         map: map,
-        icon: iconS,
-        title: 'Ponto Partida: ' + pnts[i].id
+        icon: iconS,        title: 'Ponto Partida: ' + pnts[i].id
       });
     } else if(i == p2){
       var marker = new google.maps.Marker({
@@ -286,6 +309,12 @@ function initMap() {
         position: pnts[i],
         map: map,
         icon: iconBase,
+        label: {
+          fontSize: "1em",
+          fontWeight: "bold",
+          text: pnts[i].label,
+          color: 'white',
+        },
         title: 'Ponto '+ pnts[i].id
       });
     }
@@ -325,7 +354,7 @@ function initMap() {
     return 1;
     MelhorRota.push({id: pnt1.id, lat: pnt1.lat, lng: pnt1.lng});
     MelhorRota.push({id: pnt1.proxpnt[pntaux].id, lat: pnt1.proxpnt[pntaux].lat, lng: pnt1.proxpnt[pntaux].lng});
-    rmvpnt(pnt1.proxpnt[pntaux],pnt1);
+
 
     if(MelhorTrajeto(pnt1.proxpnt[pntaux], pnt2,MelhorRota) == 1){
       MelhorRota.pop();
@@ -367,7 +396,7 @@ function squash(arr){
 }
 //adicionar rota na div
 function reapareceDiv() {
-document.getElementById("lista").style.visibility = "visible";
+  document.getElementById("lista").style.visibility = "visible";
 }
 var MelhorRota2 = squash(MelhorRota);
 var subs = [];

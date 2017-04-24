@@ -302,15 +302,17 @@ function initMap() {
       }
     }
   }
+
+
   var MelhorTrajeto = function(pnt1, pnt2,MelhorRota){
     for(var i =0; i < pnts.length;i++){
       rmvpnt(pnts[i],pnt1);
     }
     if(DistTraj(pnt1,pnt2) == 0){
-      console.log('Distancia do ponto ' + pnt1.id+' até o destino:'+DistTraj(pnt1,pnt2));
+      //console.log('Distancia do ponto ' + pnt1.id+' até o destino:'+DistTraj(pnt1,pnt2));
       return 0;
     }
-    console.log('Distancia do ponto ' + pnt1.id + ' até o destino:' +DistTraj(pnt1,pnt2));
+    //console.log('Distancia do ponto ' + pnt1.id + ' até o destino:' +DistTraj(pnt1,pnt2));
     var aux = 1000000;
     var pntaux;
     for(var i = 0; i < pnt1.proxpnt.length;i++){
@@ -363,7 +365,10 @@ function squash(arr){
   }
   return tmp;
 }
-//adicionar rota no HTML
+//adicionar rota na div
+function reapareceDiv() {
+document.getElementById("lista").style.visibility = "visible";
+}
 var MelhorRota2 = squash(MelhorRota);
 var subs = [];
 for(var i = 0; i < MelhorRota2.length; i++){
@@ -374,6 +379,8 @@ for(var i = 0; i < MelhorRota2.length; i++){
   }
 }
 document.getElementById("cam").innerHTML = subs.join('');
+reapareceDiv();
+
 //fim adicionar rota no HTML
 //fim Melhor trajeto code
 //DesenhaRota code

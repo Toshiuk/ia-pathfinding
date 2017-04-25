@@ -235,9 +235,13 @@ function initMap() {
     for(var i = 0; i < pnts[npnt].proxpnt.length; i++){
       rmvpnt(pnts[npnt].proxpnt[i],pnts[npnt]);
     }
+    for(var i = 0; i < pnts[npnt].proxpnt.length; i++){
+      rmvpnt(pnts[npnt],pnts[npnt].proxpnt[i]);
+    } 
     for(i; i>=0; i--){
       pnts[npnt].pop;
     }
+     
   }
   // //fim obstaculo
   for (var i = 0; i < pnts.length; i++) {

@@ -228,6 +228,10 @@ function initMap() {
   var p2 = document.getElementById('formGroupExampleInput2').value;
   //começo obstaculo
   var p3 = document.getElementById('formGroupExampleInput3').value;
+  if(p1 == p2 || p1 == p3 || p2 == p3){
+	  alert('Entradas inválidas. Insira outro valor.');
+	  initBodyMap();
+  } else {
   if(p3.length != 0) {
     caminhodanificado(p3);
   }
@@ -423,5 +427,5 @@ var DesenharRota = new google.maps.Polyline({
 });
 DesenharRota.setMap(map);
 //fim DesenhaRota code
-
+  }
 }//fim mapa

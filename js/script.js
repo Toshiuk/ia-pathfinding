@@ -258,7 +258,7 @@ function initMap() {
     initBodyMap();
   } else if(p1 == p3 || p2 == p3){
     alert('Não há como remover esse ponto, escolha outro.');
-    
+    initBodyMap();
   }else {
     if(p3.length != 0) {
       caminhodanificado(p3);

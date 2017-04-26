@@ -276,7 +276,7 @@ function initMap() {
     var markers = new Array();
     //event click
     function attClick(vet,pos){
-      console.log("vet: " + vet[pos]+ "  pos: " +pos);
+      //console.log("vet: " + vet[pos]+ "  pos: " +pos);
       vet[pos].addListener('click', function() {
         p3 = pos;
         $("#formGroupExampleInput3").attr("value", ""+p3+"");

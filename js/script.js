@@ -445,7 +445,7 @@ function initMap() {
   };
 
   MelhorTrajeto(pnts[p1],pnts[p2],MelhorRota);
-  console.log('Initiating Greedy Best-First Search Pathfinding...');
+  console.log('Initiating Greedy Depth-First Search Pathfinding...');
   //deleta valores duplicados no array para função abaixo
   function squash(arr){
     var tmp = [];
@@ -485,5 +485,5 @@ function initMap() {
   DesenharRota.setMap(map);
   //fim DesenhaRota code
 }
-console.log('Finished Greedy Best-First Search Pathfinding successfully.');
+console.log('Finished Greedy Depth-First Search Pathfinding successfully.');
 }//fim mapa calculo

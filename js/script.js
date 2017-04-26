@@ -1,3 +1,4 @@
+//inicia mapa comum
 function initBodyMap(){
   var pnts = new Array();
   pnts[0] = {label: '0', id: 0,lat: -29.981386500, lng: -51.135263400, proxpnt : [] };
@@ -51,9 +52,10 @@ function initBodyMap(){
     center: pnts[28],
   });
   //fim cria mapa
+
   //inserir marcadores no mapa
-  var iconBase ='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC9ElEQVRYR7WWS2sUQRSFz60JMRtFEHFhMtU9D5+Q4CK6iKioGEEDooKK4E9QjI8sdKcb8wB3/gBBBUEDAUVRTEIWihFiFllkOv3ITLIKKi4SNdN1pXUiY9LT3fOa5VSdc76aunNvEcr4JJoT6ViMzzP4EBR2KahNnpyEWBCgKQX1jpR6YmSzM1FtKcrGbZq2QwH3wOjy8kI0TAqDLoseM2dmwvzDzJCOa5ddVn1CiMYws+J1pdRPERNXDdt+EKQLBEhq2n1iXCknePVeAvdnHOdGKY+SAGmp32bwnWrCV7TE6MnM2r1+Xr4AiXhivyA1AkDUAgCAS4SOjG1/WPsLrU2gtJQTDGqtUXjBhscNx2kPBUjHEyeZ1FBtwwtugjoNy3pd7L3mChJSPhWgs3UBUHhkZO2LQQCUatG+QGBjPQAUeMF0nM0lAbZLqbsgsx7hK57CzTdP53Jz//4hxWHJeLyDSIzVE0ApsdfMmh/9AaQ8TKC39QQgQQczljXqC6DremtM8ed6AriC2izLmvQFSKVSG7Cc/xZh4FTKqBaXf62fn59f9AXwvky2aFMksLPShCAdgSczjtMW2AeSUvYSqOTwqAaMwX0zjnMzEKCedaCUaDez5ngggLeYiMdHBIkD1Zx2tVYxJsxZe0/oLCgAHBEk3tQSAEyXjFnrYSQAb1NKai8BHK8NBE83O/ruYQznIwN4D1BBahICTdVCMPj0jOM89/MJfpJJ/TqB+6oBIMaLzKx9opRH2KNUJKV8RaCjFUJ8Rb6h1ZgzcpUCQNf1LaT4kwC2lgtB4DMZx3kW3JwiuKY1bR+7GC6nHvyaTtk1UCxIato5YjyOMicUYci07VMAVNj5wmrgP31Kym6ABkL6/diS6x7L5XJLYeHeelkAniAt9bsMvuVnzgrvaV1Dp2EY36OEVwTwt0npAwB3F4coVqOisbGrnPCKAf5AtOj9EHytADGYJ1ywbftH1JOv7Cv7CooD/lyHQpORtbwRG1pwfnC/AfUDCDAO7gZXAAAAAElFTkSuQmCC';
-  //var p3 = document.getElementById('formGroupExampleInput3').value;
+  var iconBase ='img/point_black.ico';
+
   for (var i = 0; i < pnts.length; i++) {
     var marker = new google.maps.Marker({
       position: pnts[i],
@@ -68,8 +70,10 @@ function initBodyMap(){
       title: 'Ponto '+ pnts[i].id
     });
   }
-}
-//fim marcadores
+}//fim marcadores
+//fim mapa comum
+
+//função map após o cálculo
 function initMap() {
   //criação dos pontos
   var pnts = new Array();
@@ -201,7 +205,7 @@ function initMap() {
     center: pnts[28],
   });
   //fim cria mapa
-  //Desenharua code
+  //Desenha trajeto no mapa
   var Ruas = [];
   for(var c = 0; c < pnts.length; c++){
     for(var d = 0; d < pnts[c].proxpnt.length; d++){
@@ -219,35 +223,90 @@ function initMap() {
     var Ruas = [];
   }
   //fim Desenharua code
+
   //inserir marcadores no mapa
-  var iconBase = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC9ElEQVRYR7WWS2sUQRSFz60JMRtFEHFhMtU9D5+Q4CK6iKioGEEDooKK4E9QjI8sdKcb8wB3/gBBBUEDAUVRTEIWihFiFllkOv3ITLIKKi4SNdN1pXUiY9LT3fOa5VSdc76aunNvEcr4JJoT6ViMzzP4EBR2KahNnpyEWBCgKQX1jpR6YmSzM1FtKcrGbZq2QwH3wOjy8kI0TAqDLoseM2dmwvzDzJCOa5ddVn1CiMYws+J1pdRPERNXDdt+EKQLBEhq2n1iXCknePVeAvdnHOdGKY+SAGmp32bwnWrCV7TE6MnM2r1+Xr4AiXhivyA1AkDUAgCAS4SOjG1/WPsLrU2gtJQTDGqtUXjBhscNx2kPBUjHEyeZ1FBtwwtugjoNy3pd7L3mChJSPhWgs3UBUHhkZO2LQQCUatG+QGBjPQAUeMF0nM0lAbZLqbsgsx7hK57CzTdP53Jz//4hxWHJeLyDSIzVE0ApsdfMmh/9AaQ8TKC39QQgQQczljXqC6DremtM8ed6AriC2izLmvQFSKVSG7Cc/xZh4FTKqBaXf62fn59f9AXwvky2aFMksLPShCAdgSczjtMW2AeSUvYSqOTwqAaMwX0zjnMzEKCedaCUaDez5ngggLeYiMdHBIkD1Zx2tVYxJsxZe0/oLCgAHBEk3tQSAEyXjFnrYSQAb1NKai8BHK8NBE83O/ruYQznIwN4D1BBahICTdVCMPj0jOM89/MJfpJJ/TqB+6oBIMaLzKx9opRH2KNUJKV8RaCjFUJ8Rb6h1ZgzcpUCQNf1LaT4kwC2lgtB4DMZx3kW3JwiuKY1bR+7GC6nHvyaTtk1UCxIato5YjyOMicUYci07VMAVNj5wmrgP31Kym6ABkL6/diS6x7L5XJLYeHeelkAniAt9bsMvuVnzgrvaV1Dp2EY36OEVwTwt0npAwB3F4coVqOisbGrnPCKAf5AtOj9EHytADGYJ1ywbftH1JOv7Cv7CooD/lyHQpORtbwRG1pwfnC/AfUDCDAO7gZXAAAAAElFTkSuQmCC';
-  var iconS = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADcklEQVRYR+2XTWxUVRTH/+fc1wH6OYMkmJiALMAqCISPDjgphc6I2riokJIAcUNICWGBGyvGxJgYoxhYaGBRQggENoZAuioJ2mkrNO1gIchX1bjpggAKaWc6BdrOO8e80WmnzXQ6b6R0w9283Pfevf/fO+f/znmPmpubZw3PLj0MoZ1wBuO052n045qamqHkfJoHNYUvHwFo3zgdke9rQ5X7J2o/qX5roWD4Dee8kOktroz8Rl9A/g8jNf3U0QeGV5X8hoVFqVMEfVtCgbmpjWPBikqycZAM1k8Qe6jQ86ymsSjcdS0fEGoKd6izsLY6QM5x4jwerGgQwdfMYAiiYL0i4ASLXQ7mRWOi0qowX5a0RFrdgOQCkASUZash5cvh3bs3Cdp37JhSrB/WhXOHIbobjLL/hH+G0lfF4cjFbCBaV2cGH/Z+mxOAiNj29nrjbOirrx8FSM0fvecvLXhtVRQ9N4UTw5wUVr2pxI1ky7nitl/up2AUoHhoXRVBvoHCnzNAaWu3lXryyUD+DgRKPBUrY/zHbdDTx6MBEGPdZXvkDgADslZC7VF/PVOAUUCxYZ09uZ1Ud6pl3ifbHpcNLSwGPY4nz+UMkC0F2SLjbWz0DPo85YkNm2+AAGq5uLisrfPPeLAi6a1pB8jkGUfYNUAuHpjKI+nXC3447i4FMw6QrweeWQpmHGDGU1BS1e2Jt699XarevQUorPYf1xTqnNv9O3Y8mawwZTOlOxMCypC/AJ6fXlFEMESMNoKeGanbdRpsMpbqTCCuXsOUqAC9ADklFYzEQhFTnuySzpg1G7JkGUZ+v1r20oVIzGlW2SLjEkAvMeiTwpYrnekRiG1cPc9Y1hZR2UOgVcmuWWASWLLCsm90+Xxt1/snA3GRgjUHiyq7P53qy2cg6N9EIp+DaeO/kDIA0InEO1v3q3fuWGqOHlXTcx3c82tuhWhcF8lhMlC9dgNYPyPlzWOps+/S/AWvQAT04N4gGEVOi2fmhil7QQ6aGW+Jh9a/SZrYY4O2MvBymo+URdsZ5kBha1dk2gDSqaJv+xcbwauqapPonfQPlOcCkC2KLwBeRGDmI3A+fCnK4FJA1kGNAWkHBP21oYAv3xrgZl3Gn1NVfPdBMPCRm43yvZec3/OhOd5DpPIhhFQJp0YeeRu2bVs6nO+mbtb9A56QI3nzmpcOAAAAAElFTkSuQmCC';
-  var iconE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADgUlEQVRYR+2XUWgUVxSG/3Nnu00b3CTakjSFRAvBNGoJIia6WdtoWnBMS2qppQR9UvJQqFXIRhFEkGKTrkKlL74UxApFqARa11ZK4ia7jfrQliaGCD64YtQ2DcnGrJpk5xyZgYkbSXZ3VtO8OC/DvWfuPd/858w5dygYDL44meM5CqZGmJfCKffDWLOu6xPWeJ4vau8IfwvQZzP8MB9vqPPtftJ3IKKXQqTCmmdEx31VA4foED8NI7X/FhmBQr4IVWmKFQv1MGNka513sb1xW3iLj5hbQbQu2RmD/yOmsyDXCf+Gn/7IBoTaOyJiLmzY6CXz/uS4rWuzn0SOQCkFQkwEV4SRgEK5ApbZTgncaZB2uKXmXKcTkLQAX3frFmBJ3lso9lTAt3SHBRqJnpb7UzH8eefcUSLZCUGeFRkyuojUl37v+QupQM6c+ViLvhZvywiAwUZNyXbN3NBb2jgNYI+PX9rsKcytjA2OXmUDCWXOC6EXghNI4Ed/bfCuDSMCCoTr3zYw9ZUGrSpjgBbfLy77zecCaQ1/sGhZ3qqx2/cGMGU8eCwAuwZFJfpB0IhVJYin8+uZAtiADMal6A+fEkkjkVbPYsyIhtuVi8lE3JrLGCBVCFIp0zd0zB2PF5YvL9r4N0C4NnyhbO/6X6/buTXvALPljAnsGCCTHEiXI8n232+edhaCBQfINgeeWQgWHGDBQ/CgptqdE+l5c+Wrm/pEgGtDoTXjifjVd9/YZVWcuaQ2S/ZsdmdJyGZllX9JUeHMbogJBbkIUd+vK/nkFJGWMYijz9B2ysJRiOq3ar1CqcZcbnVJAC+oHBQvWo679//K+7z6/Nhcb24r5RSgG0q1NHt/7klWIND5/itw8VYBNwG02rRp5EoUeypcd4YHCvbUto8+dQgC3XrreM3a/elOPq3hLbXEfJCI3rEgme+JUt9VFum7c90F06HpunFSbsV6MThmCZm+F6Tq6bPZAiF9gxAOgPCebTeYB5e8XPy6QDDy8J+4AnLNFq+g/Gl7gVMA+/ljIX0VKzQJ+CNAFU3nkZnQJCEi2tfsC16eN4Bk8LZQfZnSeKkYYghTf/IB5X8BSKXic4DnCiy8Amc7umMKygNwNUTTQBIBY7ShzluQbQ1wsm7Wn1MRfPPhJu8XTjbK9lkyf88nXsoPkPB2MIkQTk4N5/u3bVsxme2mTtY9Au04JVbz4IatAAAAAElFTkSuQmCC';
-  var iconO = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAB1ElEQVQ4T5XVyavPURjH8dfNuMcC2Rh2ioV/wFBshDJmKhtFKUqGfwALFkRKIklc92Jhowz/gLKxJUOGwt4YfW7n1PHr+7v3d8/ue77PeZ9n+DzPGdK9ZmIbNmAF5hazT3iO+7iL773Hhzp4O3C2gfS500ccxnBr0AKn4CL2NwZf8BSvEduFWIXZjc0lHMKf7LXAyw3sM47iNn73uDgNu3AGc8q/QA+2wIR5qzn4GOu7ctTYzMMjLC17yflwPEwBElISH89eYk0x3jgBdD5eFE8/YFGAe3G93LIbI3iAtQNC9+FqPR/gPWxCCpAwkrN4PSh0OmMVn4XRAN9hAe5ge5OjyUCjyc14G+AvTMUpnOyp6KDQ0ziGny0wmyc6VDwINM4cr8AachSf0netiaA15DdtUb6WoiQFk4G2RRkJMFK5UQiRwLV+zdun+umaK+XMzirsV8W7SGd5kUE/bhv+Eywrvf0eS2ovJ3fp26x0yjpE+eNBH2J1YxDZjOmwrkyaA+UjnqZqN1O5HmpytqfIrE6dC2Xi/DdtMr7ON9BwvuEZkpK/WIyVpSvqPTlzpGt8VYOtOIc0/ngrOcuAHW2NuiZ2/s/AFmTatE9AerY+AQH96L3xH1J4duEnl2GMAAAAAElFTkSuQmCC';
-  var p1 = document.getElementById('formGroupExampleInput').value;
-  var p2 = document.getElementById('formGroupExampleInput2').value;
-  //começo obstaculo
-  var p3 = document.getElementById('formGroupExampleInput3').value;
-  if(p1 == p2 || p1 == p3 || p2 == p3){
-	  alert('Entradas inválidas. Insira outro valor.');
-	  initBodyMap();
-  } else {
-  if(p3.length != 0) {
-    caminhodanificado(p3);
+  var iconBase = 'img/point_black.ico';
+  var iconS = 'img/point_red.ico';
+  var iconE = 'img/point_green.ico';
+  var iconO = 'img/point_no.ico';
+  var p1 = document.getElementById('formGroupExampleInput').value; //origem
+  var p2 = document.getElementById('formGroupExampleInput2').value; // destino
+  var p3 = document.getElementById('formGroupExampleInput3').value; // obstruido
+  //condiçoes de valores
+  if(p1.length == 0 || p2.length == 0){
+      alert('Adicione pelo menos o ponto inicial e final.');
   }
-  function caminhodanificado(npnt){
-    for(var i = 0; i < pnts[npnt].proxpnt.length; i++){
-      rmvpnt(pnts[npnt].proxpnt[i],pnts[npnt]);
+  else if(p1 < 0 || p1 > 43 || p2 < 0 || p2 > 43 || p3 < 0 || p3 > 43){ //valores fora dos pontos
+    alert('Entradas inválidas. Insira outro valor.');
+    initBodyMap();
+  }else if(p1 == p2){
+    alert('Você já está nesse Ponto, escolha outro.'); //ponto igual
+    initBodyMap();
+  } else if(p1 == p3 || p2 == p3){
+    alert('Não há como remover esse ponto, escolha outro.');
+    initBodyMap();
+  }else {
+    if(p3.length != 0) {
+      caminhodanificado(p3);
     }
-    for(i; i>=0; i--){
-      pnts[npnt].pop;
+    //função danificado para remover pontos e seus vizinhos
+    function caminhodanificado(npnt){
+      for(var i = 0; i < pnts[npnt].proxpnt.length; i++){
+        rmvpnt(pnts[npnt].proxpnt[i],pnts[npnt]);
+      }
+      for(i; i>=0; i--){
+        pnts[npnt].pop;
+      }
     }
-     
-  }
-  // //fim obstaculo
-  for (var i = 0; i < pnts.length; i++) {
-    if(i == 0){
-      if(p1 == 0){
+    // //fim obstaculo
+
+    //inserção de markers e condições
+    for (var i = 0; i < pnts.length; i++) {
+      if(i == 0){
+        if(p1 == 0){
+          var marker = new google.maps.Marker({
+            position: pnts[i],
+            map: map,
+            icon: iconS,
+            label: {
+              fontSize: "1em",
+              fontWeight: "bold",
+              text: pnts[i].label,
+              color: 'white',
+            },
+            title: 'Ponto Partida: ' + pnts[i].id
+          });
+        } else if(p2 == 0){
+          var marker = new google.maps.Marker({
+            position: pnts[i],
+            map: map,
+            icon: iconE,
+            label: {
+              fontSize: "1em",
+              fontWeight: "bold",
+              text: pnts[i].label,
+              color: 'white',
+            },
+            labelClass: "label",
+            title: 'Ponto Destino: ' + pnts[i].id
+          });
+        }
+        else {
+          var marker = new google.maps.Marker({
+            position: pnts[i],
+            map: map,
+            icon: iconBase,
+            label: {
+              fontSize: "1em",
+              fontWeight: "bold",
+              text: pnts[i].label,
+              color: 'white',
+            },
+            title: 'Ponto 0'
+          });
+        }
+      }
+      else if(i == p1) {
         var marker = new google.maps.Marker({
           position: pnts[i],
           map: map,
@@ -260,7 +319,7 @@ function initMap() {
           },
           title: 'Ponto Partida: ' + pnts[i].id
         });
-      } else if(p2 == 0){
+      } else if(i == p2){
         var marker = new google.maps.Marker({
           position: pnts[i],
           map: map,
@@ -273,8 +332,15 @@ function initMap() {
           },
           title: 'Ponto Destino: ' + pnts[i].id
         });
-      }
-      else {
+      } else if(i == p3){
+        var marker = new google.maps.Marker({
+          position: pnts[i],
+          map: map,
+          icon: iconO,
+          animation:  google.maps.Animation.DROP,
+          title: 'Ponto interditado.'
+        });
+      } else {
         var marker = new google.maps.Marker({
           position: pnts[i],
           map: map,
@@ -285,147 +351,113 @@ function initMap() {
             text: pnts[i].label,
             color: 'white',
           },
-          title: 'Ponto 0'
+          title: 'Ponto '+ pnts[i].id
         });
       }
     }
-    else if(i == p1) {
-      var marker = new google.maps.Marker({
-        position: pnts[i],
-        map: map,
-        icon: iconS,        title: 'Ponto Partida: ' + pnts[i].id
-      });
-    } else if(i == p2){
-      var marker = new google.maps.Marker({
-        position: pnts[i],
-        map: map,
-        icon: iconE,
-        title: 'Ponto Destino: ' + pnts[i].id
-      });
-    } else if(i == p3){
-      var marker = new google.maps.Marker({
-        position: pnts[i],
-        map: map,
-        icon: iconO,
-        title: 'Ponto interditado.'
-      });
-    } else {
-      var marker = new google.maps.Marker({
-        position: pnts[i],
-        map: map,
-        icon: iconBase,
-        label: {
-          fontSize: "1em",
-          fontWeight: "bold",
-          text: pnts[i].label,
-          color: 'white',
-        },
-        title: 'Ponto '+ pnts[i].id
-      });
-    }
-  }
-  //fim marcadores
+    //fim marcadores
 
-  //MelhorTrajeto code
-  var MelhorRota = [];
-  function rmvpnt(pntf1, pntf2) {
-    for(var i = 0; i < pntf1.proxpnt.length; i++){
-      if(pntf1.proxpnt[i].lat == pntf2.lat && pntf1.proxpnt[i].lng == pntf2.lng )
-      {
-        pntf1.proxpnt.splice(i,1);
+    //MelhorTrajeto code
+    var MelhorRota = []; //vetor onde será adicionada a MelhorRota encontrada pela funcção
+    function rmvpnt(pntf1, pntf2) {
+      for(var i = 0; i < pntf1.proxpnt.length; i++){
+        if(pntf1.proxpnt[i].lat == pntf2.lat && pntf1.proxpnt[i].lng == pntf2.lng )
+        {
+          pntf1.proxpnt.splice(i,1);
+        }
       }
     }
-  }
+    var MelhorTrajeto = function(pnt1, pnt2,MelhorRota){
+      for(var i =0; i < pnts.length;i++){
+        rmvpnt(pnts[i],pnt1);
+      }
+      if(DistTraj(pnt1,pnt2) == 0){ //verifica se a distância do ponto até o ponto destino, em linha reta, é igual a zero
+        //console.log('Distancia do ponto ' + pnt1.id+' até o destino:'+DistTraj(pnt1,pnt2));
+        return 0; //se for, então é porque estamos no ponto final
+      }
+      //console.log('Distancia do ponto ' + pnt1.id + ' até o destino:' +DistTraj(pnt1,pnt2));
+      var aux = 1000000;
+      var pntaux;
+      for(var i = 0; i < pnt1.proxpnt.length;i++){
+        if( aux > DistTraj(pnt1.proxpnt[i],pnt2)){
+          aux = DistTraj(pnt1.proxpnt[i],pnt2); //aux recebe o menor valor
+          pntaux = i;
+        }
+      }
+      if(pnt1.proxpnt.length == 0)
+      return 1;
+      MelhorRota.push({id: pnt1.id, lat: pnt1.lat, lng: pnt1.lng});
+      MelhorRota.push({id: pnt1.proxpnt[pntaux].id, lat: pnt1.proxpnt[pntaux].lat, lng: pnt1.proxpnt[pntaux].lng});
 
 
-  var MelhorTrajeto = function(pnt1, pnt2,MelhorRota){
-    for(var i =0; i < pnts.length;i++){
-      rmvpnt(pnts[i],pnt1);
-    }
-    if(DistTraj(pnt1,pnt2) == 0){
-      //console.log('Distancia do ponto ' + pnt1.id+' até o destino:'+DistTraj(pnt1,pnt2));
+      if(MelhorTrajeto(pnt1.proxpnt[pntaux], pnt2,MelhorRota) == 1){
+        MelhorRota.pop();
+        MelhorRota.pop();
+        return MelhorTrajeto(pnt1,pnt2,MelhorRota);
+      }
       return 0;
     }
-    //console.log('Distancia do ponto ' + pnt1.id + ' até o destino:' +DistTraj(pnt1,pnt2));
-    var aux = 1000000;
-    var pntaux;
-    for(var i = 0; i < pnt1.proxpnt.length;i++){
-      if( aux > DistTraj(pnt1.proxpnt[i],pnt2)){
-        aux = DistTraj(pnt1.proxpnt[i],pnt2);
-        pntaux = i;
+
+    //função que calcula a distâcia entre os dois pontos
+    var DistTraj = function(pnt1, pnt2) {
+      var deg2rad = 0.017453292519943295; // === Math.PI / 180
+      var cos = Math.cos;
+      lat1 = pnt1.lat;
+      lon1 = pnt1.lng;
+      lat2 = pnt2.lat;
+      lon2 = pnt2.lng;
+      lat1 *= deg2rad;
+      lon1 *= deg2rad;
+      lat2 *= deg2rad;
+      lon2 *= deg2rad;
+      var diam = 12742; // Diameter of the earth in km (2 * 6371)
+      var dLat = lat2 - lat1;
+      var dLon = lon2 - lon1;
+      var a = ( (1 - cos(dLat)) +
+      (1 - cos(dLon)) * cos(lat1) * cos(lat2)
+    ) / 2;
+    return diam * Math.asin(Math.sqrt(a)) * 1000;
+  };
+
+  MelhorTrajeto(pnts[p1],pnts[p2],MelhorRota);
+  console.log('Initiating Greedy Best-First Search Pathfinding...');
+  //deleta valores duplicados no array para função abaixo
+  function squash(arr){
+    var tmp = [];
+    for(var i = 0; i < arr.length; i++){
+      if(tmp.indexOf(arr[i].id) == -1){
+        tmp.push(arr[i].id);
       }
     }
-    if(pnt1.proxpnt.length == 0)
-    return 1;
-    MelhorRota.push({id: pnt1.id, lat: pnt1.lat, lng: pnt1.lng});
-    MelhorRota.push({id: pnt1.proxpnt[pntaux].id, lat: pnt1.proxpnt[pntaux].lat, lng: pnt1.proxpnt[pntaux].lng});
-
-
-    if(MelhorTrajeto(pnt1.proxpnt[pntaux], pnt2,MelhorRota) == 1){
-      MelhorRota.pop();
-      MelhorRota.pop();
-      return MelhorTrajeto(pnt1,pnt2,MelhorRota);
-    }
-    return 0;
+    return tmp;
   }
-
-  var DistTraj = function(pnt1, pnt2) {
-    var deg2rad = 0.017453292519943295; // === Math.PI / 180
-    var cos = Math.cos;
-    lat1 = pnt1.lat;
-    lon1 = pnt1.lng;
-    lat2 = pnt2.lat;
-    lon2 = pnt2.lng;
-    lat1 *= deg2rad;
-    lon1 *= deg2rad;
-    lat2 *= deg2rad;
-    lon2 *= deg2rad;
-    var diam = 12742; // Diameter of the earth in km (2 * 6371)
-    var dLat = lat2 - lat1;
-    var dLon = lon2 - lon1;
-    var a = ( (1 - cos(dLat)) +
-    (1 - cos(dLon)) * cos(lat1) * cos(lat2)
-  ) / 2;
-
-  return diam * Math.asin(Math.sqrt(a)) * 1000;
-};
-MelhorTrajeto(pnts[p1],pnts[p2],MelhorRota);
-function squash(arr){
-  var tmp = [];
-  for(var i = 0; i < arr.length; i++){
-    if(tmp.indexOf(arr[i].id) == -1){
-      tmp.push(arr[i].id);
+  //adicionar rota em uma lista que será mostrada no HTML
+  function reapareceDiv() {
+    document.getElementById("lista").style.visibility = "visible";
+  }
+  var MelhorRota2 = squash(MelhorRota);
+  var subs = [];
+  for(var i = 0; i < MelhorRota2.length; i++){
+    if(i == (MelhorRota2.length-1)){
+      subs[i] = "<li> Você chegou ao destino. </li>";
+    } else {
+      subs[i] = "<li> Saia do ponto " + MelhorRota2[i] +" e vá até o " + MelhorRota2[i+1] + ".</li>";
     }
   }
-  return tmp;
-}
-//adicionar rota na div
-function reapareceDiv() {
-  document.getElementById("lista").style.visibility = "visible";
-}
-var MelhorRota2 = squash(MelhorRota);
-var subs = [];
-for(var i = 0; i < MelhorRota2.length; i++){
-  if(i == (MelhorRota2.length-1)){
-    subs[i] = "<li> Você chegou ao destino. </li>";
-  } else {
-    subs[i] = "<li> Saia do ponto " + MelhorRota2[i] +" e vá até o " + MelhorRota2[i+1] + ".</li>";
-  }
-}
-document.getElementById("cam").innerHTML = subs.join('');
-reapareceDiv();
+  document.getElementById("cam").innerHTML = subs.join('');
+  reapareceDiv();
+  //fim adicionar rota no HTML
+  //fim Melhor trajeto code
 
-//fim adicionar rota no HTML
-//fim Melhor trajeto code
-//DesenhaRota code
-var DesenharRota = new google.maps.Polyline({
-  path: MelhorRota,
-  geodesic: true,
-  strokeColor: '#0095b6 ',
-  strokeOpacity: 1,
-  strokeWeight: 10
-});
-DesenharRota.setMap(map);
-//fim DesenhaRota code
-  }
-}//fim mapa
+  //DesenhaRota no mapa code
+  var DesenharRota = new google.maps.Polyline({
+    path: MelhorRota,
+    geodesic: true,
+    strokeColor: '#0095b6 ',
+    strokeOpacity: 1,
+    strokeWeight: 10
+  });
+  DesenharRota.setMap(map);
+  //fim DesenhaRota code
+}
+}//fim mapa calculo

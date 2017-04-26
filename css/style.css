@@ -81,7 +81,7 @@ ul#cam {
 
 @media screen and (max-width: 980px) {
 
-	.button {
+  .button {
     margin-left: 39%;
   }
 }

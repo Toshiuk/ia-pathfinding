@@ -52,12 +52,12 @@ function initBodyMap(){
     center: pnts[28],
   });
   //fim cria mapa
-
+  var p3 = document.getElementById('formGroupExampleInput3').value;
   //inserir marcadores no mapa
   var iconBase ='img/point_black.ico';
-
+  var markers = new Array();
   for (var i = 0; i < pnts.length; i++) {
-    var marker = new google.maps.Marker({
+    markers.push(new google.maps.Marker({
       position: pnts[i],
       map: map,
       icon: iconBase,
@@ -68,13 +68,26 @@ function initBodyMap(){
         color: 'white',
       },
       title: 'Ponto '+ pnts[i].id
+    }));
+    attClick(i);
+  }//fim marcadores
+
+  //event click
+  function attClick(pos){
+    markers[pos].addListener('click', function() {
+      var num = parseInt(markers[pos].getLabel().text, 10);
+      p3 = num;
+      $("#formGroupExampleInput3").attr("value", ""+p3+"");
     });
-  }
-}//fim marcadores
-//fim mapa comum
+  }//fim evenct click
+}//fim mapa comum
+
+
+
 
 //função map após o cálculo
 function initMap() {
+
   //criação dos pontos
   var pnts = new Array();
   function addpnt(pntf1, pntf2) {
@@ -232,9 +245,10 @@ function initMap() {
   var p1 = document.getElementById('formGroupExampleInput').value; //origem
   var p2 = document.getElementById('formGroupExampleInput2').value; // destino
   var p3 = document.getElementById('formGroupExampleInput3').value; // obstruido
+
   //condiçoes de valores
   if(p1.length == 0 || p2.length == 0){
-      alert('Adicione pelo menos o ponto inicial e final.');
+    alert('Adicione pelo menos o ponto inicial e final.');
   }
   else if(p1 < 0 || p1 > 43 || p2 < 0 || p2 > 43 || p3 < 0 || p3 > 43){ //valores fora dos pontos
     alert('Entradas inválidas. Insira outro valor.');
@@ -244,7 +258,7 @@ function initMap() {
     initBodyMap();
   } else if(p1 == p3 || p2 == p3){
     alert('Não há como remover esse ponto, escolha outro.');
-    initBodyMap();
+    
   }else {
     if(p3.length != 0) {
       caminhodanificado(p3);
@@ -259,12 +273,22 @@ function initMap() {
       }
     }
     // //fim obstaculo
+    var markers = new Array();
+    //event click
+    function attClick(vet,pos){
+      console.log("vet: " + vet[pos]+ "  pos: " +pos);
+      vet[pos].addListener('click', function() {
+        p3 = pos;
+        $("#formGroupExampleInput3").attr("value", ""+p3+"");
+      });
+    }
+    //fim evenct click
 
     //inserção de markers e condições
     for (var i = 0; i < pnts.length; i++) {
       if(i == 0){
         if(p1 == 0){
-          var marker = new google.maps.Marker({
+          markers[i] = new google.maps.Marker({
             position: pnts[i],
             map: map,
             icon: iconS,
@@ -277,7 +301,7 @@ function initMap() {
             title: 'Ponto Partida: ' + pnts[i].id
           });
         } else if(p2 == 0){
-          var marker = new google.maps.Marker({
+          markers[i] = new google.maps.Marker({
             position: pnts[i],
             map: map,
             icon: iconE,
@@ -292,7 +316,7 @@ function initMap() {
           });
         }
         else {
-          var marker = new google.maps.Marker({
+          markers[i] = new google.maps.Marker({
             position: pnts[i],
             map: map,
             icon: iconBase,
@@ -307,7 +331,7 @@ function initMap() {
         }
       }
       else if(i == p1) {
-        var marker = new google.maps.Marker({
+        markers[i] = new google.maps.Marker({
           position: pnts[i],
           map: map,
           icon: iconS,
@@ -320,7 +344,7 @@ function initMap() {
           title: 'Ponto Partida: ' + pnts[i].id
         });
       } else if(i == p2){
-        var marker = new google.maps.Marker({
+        markers[i] = new google.maps.Marker({
           position: pnts[i],
           map: map,
           icon: iconE,
@@ -333,7 +357,7 @@ function initMap() {
           title: 'Ponto Destino: ' + pnts[i].id
         });
       } else if(i == p3){
-        var marker = new google.maps.Marker({
+        markers[i] = new google.maps.Marker({
           position: pnts[i],
           map: map,
           icon: iconO,
@@ -341,7 +365,7 @@ function initMap() {
           title: 'Ponto interditado.'
         });
       } else {
-        var marker = new google.maps.Marker({
+        markers[i] = new google.maps.Marker({
           position: pnts[i],
           map: map,
           icon: iconBase,
@@ -354,6 +378,7 @@ function initMap() {
           title: 'Ponto '+ pnts[i].id
         });
       }
+      attClick(markers, i);
     }
     //fim marcadores
 
@@ -460,4 +485,5 @@ function initMap() {
   DesenharRota.setMap(map);
   //fim DesenhaRota code
 }
+console.log('Finished Greedy Best-First Search Pathfinding successfully.');
 }//fim mapa calculo
